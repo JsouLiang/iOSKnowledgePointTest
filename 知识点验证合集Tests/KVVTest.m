@@ -1,5 +1,5 @@
 //
-//  _______Tests.m
+//  KVVTest.m
 //  知识点验证合集Tests
 //
 //  Created by X-Liang on 2017/10/29.
@@ -7,12 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Person.h"
 
-@interface _______Tests : XCTestCase
+@interface KVVTest : XCTestCase
 
 @end
 
-@implementation _______Tests
+@implementation KVVTest
 
 - (void)setUp {
     [super setUp];
@@ -34,6 +35,16 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+- (void)testValidateValue {
+    Person *person = [Person new];
+    NSString *nameKey = @"name";
+    NSString *nameValue = @"name";
+    NSString *loveKey = @"love";
+    NSString *loveValue = @"love";
+    [person validateValue:&nameValue forKey:nameKey error:nil];
+    [person validateValue:&loveValue forKey:loveKey error:nil];
 }
 
 @end

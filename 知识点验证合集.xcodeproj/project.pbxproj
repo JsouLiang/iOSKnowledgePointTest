@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3819A25DB0776CB5C57E3F /* Pods________Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207B4F82247D94E1030B532A /* Pods________Tests.framework */; };
 		472C9EA21FA583E6005481C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9EA11FA583E6005481C9 /* AppDelegate.m */; };
 		472C9EA51FA583E6005481C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9EA41FA583E6005481C9 /* ViewController.m */; };
 		472C9EA81FA583E6005481C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472C9EA61FA583E6005481C9 /* Main.storyboard */; };
 		472C9EAA1FA583E6005481C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 472C9EA91FA583E6005481C9 /* Assets.xcassets */; };
 		472C9EAD1FA583E6005481C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472C9EAB1FA583E6005481C9 /* LaunchScreen.storyboard */; };
 		472C9EB01FA583E6005481C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9EAF1FA583E6005481C9 /* main.m */; };
-		472C9EBA1FA583E7005481C9 /* _______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9EB91FA583E7005481C9 /* _______Tests.m */; };
 		472C9EC51FA583E7005481C9 /* _______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9EC41FA583E7005481C9 /* _______UITests.m */; };
+		472C9ED41FA583F3005481C9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9ED31FA583F3005481C9 /* Person.m */; };
+		472C9ED71FA586AA005481C9 /* KVCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9ED61FA586AA005481C9 /* KVCTest.m */; };
+		472C9ED91FA586B6005481C9 /* KVOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9ED81FA586B6005481C9 /* KVOTest.m */; };
+		472C9EDB1FA586BF005481C9 /* KVVTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9EDA1FA586BF005481C9 /* KVVTest.m */; };
+		47F795171FA711B40031E93B /* GCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F795161FA711B40031E93B /* GCDTest.m */; };
+		47F795671FA74F0F0031E93B /* RuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F795661FA74F0F0031E93B /* RuntimeTest.m */; };
+		47F7956A1FA7618F0031E93B /* Class1.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F795691FA7618F0031E93B /* Class1.m */; };
+		47F7956D1FA7619B0031E93B /* Class2.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F7956C1FA7619B0031E93B /* Class2.m */; };
+		47F795701FA76A080031E93B /* Class3.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F7956F1FA76A080031E93B /* Class3.m */; };
+		47F795781FA809F30031E93B /* LRUCacheStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F795771FA809F30031E93B /* LRUCacheStrategy.m */; };
+		509A40A1C1B1B6ACEBBC4781 /* Pods________UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AC1882FE272C3F6949960D /* Pods________UITests.framework */; };
+		8142FCBC430155A21BECF9C7 /* Pods________.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205EF605B9F54A02CACCC1F0 /* Pods________.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		064AB5745159A14C3533CE84 /* Pods-知识点验证合集.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集.debug.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集/Pods-知识点验证合集.debug.xcconfig"; sourceTree = "<group>"; };
+		205EF605B9F54A02CACCC1F0 /* Pods________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods________.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		207B4F82247D94E1030B532A /* Pods________Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods________Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		472C9E9D1FA583E6005481C9 /* 知识点验证合集.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "知识点验证合集.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		472C9EA01FA583E6005481C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		472C9EA11FA583E6005481C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,11 +61,32 @@
 		472C9EAE1FA583E6005481C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		472C9EAF1FA583E6005481C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		472C9EB51FA583E7005481C9 /* 知识点验证合集Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "知识点验证合集Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		472C9EB91FA583E7005481C9 /* _______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______Tests.m"; sourceTree = "<group>"; };
 		472C9EBB1FA583E7005481C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		472C9EC01FA583E7005481C9 /* 知识点验证合集UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "知识点验证合集UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		472C9EC41FA583E7005481C9 /* _______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______UITests.m"; sourceTree = "<group>"; };
 		472C9EC61FA583E7005481C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		472C9ED21FA583F3005481C9 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		472C9ED31FA583F3005481C9 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		472C9ED51FA58447005481C9 /* Tips.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Tips.md; sourceTree = "<group>"; };
+		472C9ED61FA586AA005481C9 /* KVCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCTest.m; sourceTree = "<group>"; };
+		472C9ED81FA586B6005481C9 /* KVOTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOTest.m; sourceTree = "<group>"; };
+		472C9EDA1FA586BF005481C9 /* KVVTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVVTest.m; sourceTree = "<group>"; };
+		47F795161FA711B40031E93B /* GCDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTest.m; sourceTree = "<group>"; };
+		47F795661FA74F0F0031E93B /* RuntimeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest.m; sourceTree = "<group>"; };
+		47F795681FA7618F0031E93B /* Class1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Class1.h; sourceTree = "<group>"; };
+		47F795691FA7618F0031E93B /* Class1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Class1.m; sourceTree = "<group>"; };
+		47F7956B1FA7619B0031E93B /* Class2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Class2.h; sourceTree = "<group>"; };
+		47F7956C1FA7619B0031E93B /* Class2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Class2.m; sourceTree = "<group>"; };
+		47F7956E1FA76A080031E93B /* Class3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Class3.h; sourceTree = "<group>"; };
+		47F7956F1FA76A080031E93B /* Class3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Class3.m; sourceTree = "<group>"; };
+		47F795761FA809F30031E93B /* LRUCacheStrategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRUCacheStrategy.h; sourceTree = "<group>"; };
+		47F795771FA809F30031E93B /* LRUCacheStrategy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRUCacheStrategy.m; sourceTree = "<group>"; };
+		7205A4101C3EEF071468003F /* Pods-知识点验证合集.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集.release.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集/Pods-知识点验证合集.release.xcconfig"; sourceTree = "<group>"; };
+		8897BFC84EC04006FC468972 /* Pods-知识点验证合集Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集Tests/Pods-知识点验证合集Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A162103AE178A24B49B35EF1 /* Pods-知识点验证合集UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集UITests/Pods-知识点验证合集UITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF4CFD453E9B819EBA09EF5D /* Pods-知识点验证合集UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集UITests/Pods-知识点验证合集UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC071C4E632D508C0618F84E /* Pods-知识点验证合集Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集Tests/Pods-知识点验证合集Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E2AC1882FE272C3F6949960D /* Pods________UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods________UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8142FCBC430155A21BECF9C7 /* Pods________.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A3819A25DB0776CB5C57E3F /* Pods________Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509A40A1C1B1B6ACEBBC4781 /* Pods________UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +124,8 @@
 				472C9EB81FA583E7005481C9 /* 知识点验证合集Tests */,
 				472C9EC31FA583E7005481C9 /* 知识点验证合集UITests */,
 				472C9E9E1FA583E6005481C9 /* Products */,
+				8AEE0A2DC40561ADAF5A58CC /* Pods */,
+				F8514B3A7DEF4752BC5C8DE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +142,8 @@
 		472C9E9F1FA583E6005481C9 /* 知识点验证合集 */ = {
 			isa = PBXGroup;
 			children = (
+				47F795721FA8083F0031E93B /* Models */,
+				47F795711FA808350031E93B /* LRU */,
 				472C9EA01FA583E6005481C9 /* AppDelegate.h */,
 				472C9EA11FA583E6005481C9 /* AppDelegate.m */,
 				472C9EA31FA583E6005481C9 /* ViewController.h */,
@@ -110,6 +153,7 @@
 				472C9EAB1FA583E6005481C9 /* LaunchScreen.storyboard */,
 				472C9EAE1FA583E6005481C9 /* Info.plist */,
 				472C9EAF1FA583E6005481C9 /* main.m */,
+				472C9ED51FA58447005481C9 /* Tips.md */,
 			);
 			path = "知识点验证合集";
 			sourceTree = "<group>";
@@ -117,8 +161,12 @@
 		472C9EB81FA583E7005481C9 /* 知识点验证合集Tests */ = {
 			isa = PBXGroup;
 			children = (
-				472C9EB91FA583E7005481C9 /* _______Tests.m */,
+				47F795161FA711B40031E93B /* GCDTest.m */,
+				472C9ED81FA586B6005481C9 /* KVOTest.m */,
+				472C9ED61FA586AA005481C9 /* KVCTest.m */,
+				472C9EDA1FA586BF005481C9 /* KVVTest.m */,
 				472C9EBB1FA583E7005481C9 /* Info.plist */,
+				47F795661FA74F0F0031E93B /* RuntimeTest.m */,
 			);
 			path = "知识点验证合集Tests";
 			sourceTree = "<group>";
@@ -132,6 +180,53 @@
 			path = "知识点验证合集UITests";
 			sourceTree = "<group>";
 		};
+		47F795711FA808350031E93B /* LRU */ = {
+			isa = PBXGroup;
+			children = (
+				47F795761FA809F30031E93B /* LRUCacheStrategy.h */,
+				47F795771FA809F30031E93B /* LRUCacheStrategy.m */,
+			);
+			path = LRU;
+			sourceTree = "<group>";
+		};
+		47F795721FA8083F0031E93B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				472C9ED21FA583F3005481C9 /* Person.h */,
+				472C9ED31FA583F3005481C9 /* Person.m */,
+				47F795681FA7618F0031E93B /* Class1.h */,
+				47F795691FA7618F0031E93B /* Class1.m */,
+				47F7956B1FA7619B0031E93B /* Class2.h */,
+				47F7956C1FA7619B0031E93B /* Class2.m */,
+				47F7956E1FA76A080031E93B /* Class3.h */,
+				47F7956F1FA76A080031E93B /* Class3.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8AEE0A2DC40561ADAF5A58CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				064AB5745159A14C3533CE84 /* Pods-知识点验证合集.debug.xcconfig */,
+				7205A4101C3EEF071468003F /* Pods-知识点验证合集.release.xcconfig */,
+				BC071C4E632D508C0618F84E /* Pods-知识点验证合集Tests.debug.xcconfig */,
+				8897BFC84EC04006FC468972 /* Pods-知识点验证合集Tests.release.xcconfig */,
+				AF4CFD453E9B819EBA09EF5D /* Pods-知识点验证合集UITests.debug.xcconfig */,
+				A162103AE178A24B49B35EF1 /* Pods-知识点验证合集UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F8514B3A7DEF4752BC5C8DE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				205EF605B9F54A02CACCC1F0 /* Pods________.framework */,
+				207B4F82247D94E1030B532A /* Pods________Tests.framework */,
+				E2AC1882FE272C3F6949960D /* Pods________UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 472C9EC91FA583E7005481C9 /* Build configuration list for PBXNativeTarget "知识点验证合集" */;
 			buildPhases = (
+				D2A26BC74D523E167ED36985 /* [CP] Check Pods Manifest.lock */,
 				472C9E991FA583E6005481C9 /* Sources */,
 				472C9E9A1FA583E6005481C9 /* Frameworks */,
 				472C9E9B1FA583E6005481C9 /* Resources */,
+				CB20CF5C6BD4296B0F4C23C2 /* [CP] Embed Pods Frameworks */,
+				C9355C26BB3B030F8CA4A79C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,9 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 472C9ECC1FA583E7005481C9 /* Build configuration list for PBXNativeTarget "知识点验证合集Tests" */;
 			buildPhases = (
+				F882582605C8DBC8762F78C2 /* [CP] Check Pods Manifest.lock */,
 				472C9EB11FA583E7005481C9 /* Sources */,
 				472C9EB21FA583E7005481C9 /* Frameworks */,
 				472C9EB31FA583E7005481C9 /* Resources */,
+				E6C5C9FE22FEF0F7629907A6 /* [CP] Embed Pods Frameworks */,
+				C96CF9CD81BDAF6C0CB24411 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,9 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 472C9ECF1FA583E7005481C9 /* Build configuration list for PBXNativeTarget "知识点验证合集UITests" */;
 			buildPhases = (
+				D0826D4CB78CED55ACAC9A2F /* [CP] Check Pods Manifest.lock */,
 				472C9EBC1FA583E7005481C9 /* Sources */,
 				472C9EBD1FA583E7005481C9 /* Frameworks */,
 				472C9EBE1FA583E7005481C9 /* Resources */,
+				A710B201DFEA8C053484208C /* [CP] Embed Pods Frameworks */,
+				70D01E5E6CFD66E4F670F8AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,14 +364,175 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		70D01E5E6CFD66E4F670F8AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-知识点验证合集UITests/Pods-知识点验证合集UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A710B201DFEA8C053484208C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-知识点验证合集UITests/Pods-知识点验证合集UITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-知识点验证合集UITests/Pods-知识点验证合集UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9355C26BB3B030F8CA4A79C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-知识点验证合集/Pods-知识点验证合集-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C96CF9CD81BDAF6C0CB24411 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-知识点验证合集Tests/Pods-知识点验证合集Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB20CF5C6BD4296B0F4C23C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-知识点验证合集/Pods-知识点验证合集-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-知识点验证合集/Pods-知识点验证合集-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0826D4CB78CED55ACAC9A2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-知识点验证合集UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2A26BC74D523E167ED36985 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-知识点验证合集-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6C5C9FE22FEF0F7629907A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-知识点验证合集Tests/Pods-知识点验证合集Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-知识点验证合集Tests/Pods-知识点验证合集Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F882582605C8DBC8762F78C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-知识点验证合集Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		472C9E991FA583E6005481C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				472C9EA51FA583E6005481C9 /* ViewController.m in Sources */,
+				47F7956D1FA7619B0031E93B /* Class2.m in Sources */,
 				472C9EB01FA583E6005481C9 /* main.m in Sources */,
+				472C9ED41FA583F3005481C9 /* Person.m in Sources */,
+				47F7956A1FA7618F0031E93B /* Class1.m in Sources */,
+				47F795701FA76A080031E93B /* Class3.m in Sources */,
 				472C9EA21FA583E6005481C9 /* AppDelegate.m in Sources */,
+				47F795781FA809F30031E93B /* LRUCacheStrategy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +540,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				472C9EBA1FA583E7005481C9 /* _______Tests.m in Sources */,
+				472C9ED71FA586AA005481C9 /* KVCTest.m in Sources */,
+				47F795671FA74F0F0031E93B /* RuntimeTest.m in Sources */,
+				472C9ED91FA586B6005481C9 /* KVOTest.m in Sources */,
+				47F795171FA711B40031E93B /* GCDTest.m in Sources */,
+				472C9EDB1FA586BF005481C9 /* KVVTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,9 +697,12 @@
 		};
 		472C9ECA1FA583E7005481C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 064AB5745159A14C3533CE84 /* Pods-知识点验证合集.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92AS9FD8QV;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = "知识点验证合集/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liang.-------";
@@ -441,9 +713,12 @@
 		};
 		472C9ECB1FA583E7005481C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7205A4101C3EEF071468003F /* Pods-知识点验证合集.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92AS9FD8QV;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = "知识点验证合集/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liang.-------";
@@ -454,6 +729,7 @@
 		};
 		472C9ECD1FA583E7005481C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC071C4E632D508C0618F84E /* Pods-知识点验证合集Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +744,7 @@
 		};
 		472C9ECE1FA583E7005481C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8897BFC84EC04006FC468972 /* Pods-知识点验证合集Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -482,6 +759,7 @@
 		};
 		472C9ED01FA583E7005481C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF4CFD453E9B819EBA09EF5D /* Pods-知识点验证合集UITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "知识点验证合集UITests/Info.plist";
@@ -495,6 +773,7 @@
 		};
 		472C9ED11FA583E7005481C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A162103AE178A24B49B35EF1 /* Pods-知识点验证合集UITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "知识点验证合集UITests/Info.plist";
