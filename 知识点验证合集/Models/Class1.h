@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Class1 : NSObject
+@property (nonatomic, copy) NSString *name;
 - (void)method1: (NSString *)param1;
 - (int)method2: (int)param1 with:(int)param2;
 - (id)method3;

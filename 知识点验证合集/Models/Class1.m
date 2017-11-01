@@ -10,6 +10,13 @@
 
 @implementation Class1
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.name = @"";
+    }
+    return self;
+}
+
 - (void)method1:(NSString *)param1 {
     
 }

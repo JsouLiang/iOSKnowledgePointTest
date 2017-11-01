@@ -59,14 +59,15 @@
     dispatch_async(queue, ^{
         NSLog(@"concurrent 2");
     });
-    dispatch_barrier_sync(queue, ^{
-        for (NSInteger index = 0; index < 5000; index++) {
+    dispatch_barrier_async(queue, ^{
+        for (NSInteger index = 0; index < 500000; index++) {
             if (index == 100) {
                 NSLog(@"barrier 100");
             } else if (index == 200) {
                 NSLog(@"barrier 200");
             }
         }
+        sleep(10);
     });
     NSLog(@"out thread a");
     dispatch_async(queue, ^{
@@ -103,6 +104,16 @@
         dispatch_queue_set_specific(dispatch_get_main_queue(), mainQueueKey, mainQueueKey, NULL);
     });
     return dispatch_get_specific(mainQueueKey) == mainQueueKey;
+}
+
+- (void)testDispatchSync {
+    dispatch_queue_t queue = dispatch_queue_create("", DISPATCH_QUEUE_CONCURRENT);
+    for (NSInteger index = 01; index < 100; index++) {
+        dispatch_sync(queue, ^{
+            NSLog(@"%ld", (long)index);
+        });
+    }
+    
 }
 
 @end

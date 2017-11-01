@@ -7,7 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
-
+#import "Class1.h"
+#import "Class2.h"
 @interface KVCTest : XCTestCase
 
 @end
@@ -34,6 +35,11 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+- (void)test {
+    Class1 *class2 = [[Class2 alloc] init];
+    
 }
 
 @end

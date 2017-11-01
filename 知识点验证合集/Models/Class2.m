@@ -41,7 +41,10 @@ typedef int (*Function)(id self, SEL _cmd, int parm1, int parm2);
     // 创建 super struct
     struct objc_super super_struct = {
         .receiver = self,
-        .super_class = class_getSuperclass(object_getClass(self))
+// 通过运行时获取 superclass 是有问题的, 在运行时 superclass 并不一定是你想要的父类，有可能是你自己
+// 假设 D 类实例 d 调用 testMethod 方法，D 类没有实现 testMethod 方法，而 D 继承于 C 类，C 类实现 testMethod 方法，在 C 的 testMethod 实现中有 self.class.superClass 这样端代码，这种情况下会有问题。因为此时 self 为 d 对象，self.class 为 D，D 的 superClass 为 C，这样在 C 的实现中获取的 superclass 就是 C 自己，出现错误；因为 self 的层级确定，所以 super 的确定无法在运行是确定
+//        .super_class = class_getSuperclass(object_getClass(self))
+        .super_class = [Class1 class]
     };
 //    typedef int *MyOBJC_msgSendSuper(struct objc_super *, SEL, int, int);
 //    MyOBJC_msgSendSuper *func = &objc_msgSendSuper;
@@ -51,5 +54,12 @@ typedef int (*Function)(id self, SEL _cmd, int parm1, int parm2);
 - (id)method6 {
     return self;
 }
+
+- (void)setName:(NSString *)name {
+    [super setName:name];
+    NSLog(@"subName");
+}
+
+ 
 
 @end
