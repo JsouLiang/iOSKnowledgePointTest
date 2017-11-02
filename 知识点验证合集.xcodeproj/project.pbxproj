@@ -56,6 +56,7 @@
 		207B4F82247D94E1030B532A /* Pods________Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods________Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		472054C81FAB0B6A00AD2A76 /* UploadImgJsonOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadImgJsonOperation.h; sourceTree = "<group>"; };
 		472054C91FAB0B6A00AD2A76 /* UploadImgJsonOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadImgJsonOperation.m; sourceTree = "<group>"; };
+		472054CB1FAB12A100AD2A76 /* Operation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Operation.md; sourceTree = "<group>"; };
 		472C9E9D1FA583E6005481C9 /* 知识点验证合集.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "知识点验证合集.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		472C9EA01FA583E6005481C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		472C9EA11FA583E6005481C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 			children = (
 				472054C81FAB0B6A00AD2A76 /* UploadImgJsonOperation.h */,
 				472054C91FAB0B6A00AD2A76 /* UploadImgJsonOperation.m */,
+				472054CB1FAB12A100AD2A76 /* Operation.md */,
 			);
 			path = NSOperation;
 			sourceTree = "<group>";
