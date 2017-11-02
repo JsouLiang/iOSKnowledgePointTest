@@ -113,7 +113,39 @@
             NSLog(@"%ld", (long)index);
         });
     }
+}
+
+- (void)testSemaphort {
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    dispatch_queue_t queue = dispatch_queue_create("", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"请求1");
+        sleep(10);
+        dispatch_semaphore_signal(semaphore);
+    });
     
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"请求2");
+        sleep(5);
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"请求3");
+        sleep(1);
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    dispatch_group_notify(group, queue, ^{
+        // 三个请求对应三次信号等待
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"请求1 完成");
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"请求2 完成");
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"请求3 完成");
+    });
 }
 
 @end

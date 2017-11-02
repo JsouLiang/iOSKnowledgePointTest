@@ -22,7 +22,7 @@ typedef void(^TestBlock)(void);
 //            NSLog(@"%ld", (long)index);
 //        });
 //    }
-    [self testAsyncSerialQueue];
+    [self testSemaphort];
    
 }
 
@@ -64,6 +64,66 @@ typedef void(^TestBlock)(void);
             sleep(index * 0.1);
         });
     }
+}
+
+- (void)testSemaphort {
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    dispatch_queue_t queue = dispatch_queue_create("", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"请求1");
+        sleep(10);
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"请求2");
+        sleep(5);
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"请求3");
+        sleep(1);
+        dispatch_semaphore_signal(semaphore);
+    });
+    
+    dispatch_group_notify(group, queue, ^{
+        // 三个请求对应三次信号等待
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"请求1 完成");
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"请求2 完成");
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"请求3 完成");
+    });
+    
+    
+    dispatch_semaphore_t sem = dispatch_semaphore_create(0);        // 初始信号量为0
+    dispatch_group_async(group, queue, ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_semaphore_signal(sem); 
+            NSLog(@"请求一");
+        });
+        dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
+    });
+    dispatch_group_async(group, queue, ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_semaphore_signal(sem);
+            NSLog(@"请求二");
+        });
+        dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"请求三");
+        
+    });
+    //在分组的所有任务完成后触发
+    dispatch_group_notify(group, queue, ^{
+        
+        NSLog(@"请求完成");
+    });
 }
 
 - (IBAction)cancel:(id)sender {
