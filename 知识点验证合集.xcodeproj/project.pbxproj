@@ -19,6 +19,7 @@
 		472C9ED71FA586AA005481C9 /* KVCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9ED61FA586AA005481C9 /* KVCTest.m */; };
 		472C9ED91FA586B6005481C9 /* KVOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9ED81FA586B6005481C9 /* KVOTest.m */; };
 		472C9EDB1FA586BF005481C9 /* KVVTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9EDA1FA586BF005481C9 /* KVVTest.m */; };
+		4776160F1FAAAD4700396099 /* MutableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4776160E1FAAAD4700396099 /* MutableDelegate.m */; };
 		47F795171FA711B40031E93B /* GCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F795161FA711B40031E93B /* GCDTest.m */; };
 		47F795671FA74F0F0031E93B /* RuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F795661FA74F0F0031E93B /* RuntimeTest.m */; };
 		47F7956A1FA7618F0031E93B /* Class1.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F795691FA7618F0031E93B /* Class1.m */; };
@@ -71,6 +72,8 @@
 		472C9ED61FA586AA005481C9 /* KVCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCTest.m; sourceTree = "<group>"; };
 		472C9ED81FA586B6005481C9 /* KVOTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOTest.m; sourceTree = "<group>"; };
 		472C9EDA1FA586BF005481C9 /* KVVTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVVTest.m; sourceTree = "<group>"; };
+		4776160D1FAAAD4700396099 /* MutableDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutableDelegate.h; sourceTree = "<group>"; };
+		4776160E1FAAAD4700396099 /* MutableDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutableDelegate.m; sourceTree = "<group>"; };
 		47F795161FA711B40031E93B /* GCDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTest.m; sourceTree = "<group>"; };
 		47F795661FA74F0F0031E93B /* RuntimeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest.m; sourceTree = "<group>"; };
 		47F795681FA7618F0031E93B /* Class1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Class1.h; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 		472C9E9F1FA583E6005481C9 /* 知识点验证合集 */ = {
 			isa = PBXGroup;
 			children = (
+				4776160C1FAAAC2500396099 /* MutableDelegate */,
 				47F795721FA8083F0031E93B /* Models */,
 				47F795711FA808350031E93B /* LRU */,
 				472C9EA01FA583E6005481C9 /* AppDelegate.h */,
@@ -178,6 +182,15 @@
 				472C9EC61FA583E7005481C9 /* Info.plist */,
 			);
 			path = "知识点验证合集UITests";
+			sourceTree = "<group>";
+		};
+		4776160C1FAAAC2500396099 /* MutableDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4776160D1FAAAD4700396099 /* MutableDelegate.h */,
+				4776160E1FAAAD4700396099 /* MutableDelegate.m */,
+			);
+			path = MutableDelegate;
 			sourceTree = "<group>";
 		};
 		47F795711FA808350031E93B /* LRU */ = {
@@ -533,6 +546,7 @@
 				47F795701FA76A080031E93B /* Class3.m in Sources */,
 				472C9EA21FA583E6005481C9 /* AppDelegate.m in Sources */,
 				47F795781FA809F30031E93B /* LRUCacheStrategy.m in Sources */,
+				4776160F1FAAAD4700396099 /* MutableDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
