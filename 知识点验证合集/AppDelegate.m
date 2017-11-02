@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "NSObject+KVO.h"
+#import "Person.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    Person *person = [[Person alloc] init];
+    [person addObserver:self forKey:@"name" withBlock:^(id observedObject, NSString *observerKey, id oldValue, id newValue) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"observer");
+        });
+    }];
+    
     return YES;
 }
 
