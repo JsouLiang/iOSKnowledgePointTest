@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='1. 柯里化'/>
+        <page name='2. 将 Protocol 方法声明为 mutating'/>
+        <page name='3. Sequence'/>
+        <page name='4. 多元组'/>
+        <page name='5. autoclosure'/>
+        <page name='6. escaping'/>
+        <page name='7. optional chaining'/>
+        <page name='8. 操作符'/>
+        <page name='9. inout'/>
+        <page name='10. 字面量表达式'/>
+        <page name='11. 下标'/>
+        <page name='12. 方法嵌套'/>
+    </pages>
+</playground>
