@@ -13,5 +13,13 @@
         <page name='10. 字面量表达式'/>
         <page name='11. 下标'/>
         <page name='12. 方法嵌套'/>
+        <page name='13. 命名空间'/>
+        <page name='14. typealias'/>
+        <page name='15. associatedtype'/>
+        <page name='16. 可变参数'/>
+        <page name='17. 初始化方法顺序'/>
+        <page name='18. Designated, Convenience, Required'/>
+        <page name='19. 初始化返回 nil'/>
+        <page name='20. static class'/>
     </pages>
 </playground>
