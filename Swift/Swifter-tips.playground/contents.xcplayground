@@ -21,5 +21,13 @@
         <page name='18. Designated, Convenience, Required'/>
         <page name='19. 初始化返回 nil'/>
         <page name='20. static class'/>
+        <page name='21. 多类型和容器'/>
+        <page name='22. default 参数'/>
+        <page name='25. ...和...&lt;'/>
+        <page name='26. AnyClass, 元类型和.self'/>
+        <page name='27. 协议和类方法中的 self'/>
+        <page name='28. 动态类型和多方法'/>
+        <page name='29. 属性观察'/>
+        <page name='99. 获取对象类型 typeOf'/>
     </pages>
 </playground>
