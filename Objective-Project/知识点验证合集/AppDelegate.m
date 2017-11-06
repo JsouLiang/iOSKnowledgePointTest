@@ -18,14 +18,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    dispatch_queue_t queue = dispatch_queue_create("queue", DISPATCH_QUEUE_SERIAL);
-    dispatch_apply(4, queue, ^(size_t index) {
-        NSLog(@"download1--%zd--%@",index,[NSThread currentThread]);
-        NSLog(@"+++++++++++++++");
-        dispatch_apply(4, queue, ^(size_t index) {
-            NSLog(@"download2--%zd--%@",index,[NSThread currentThread]);
-        });
-    });
+//    dispatch_queue_t queue = dispatch_queue_create("queue", DISPATCH_QUEUE_SERIAL);
+//    dispatch_apply(4, queue, ^(size_t index) {
+//        NSLog(@"download1--%zd--%@",index,[NSThread currentThread]);
+//        NSLog(@"+++++++++++++++");
+//        dispatch_apply(4, queue, ^(size_t index) {
+//            NSLog(@"download2--%zd--%@",index,[NSThread currentThread]);
+//        });
+//    });
     
     
     Person *person = [[Person alloc] init];

@@ -106,6 +106,23 @@
     return dispatch_get_specific(mainQueueKey) == mainQueueKey;
 }
 
+static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey;
+- (void)testSpecific {
+    dispatch_queue_t queue = dispatch_queue_create("", NULL);
+    dispatch_queue_set_specific(queue, kDispatchQueueSpecificKey, (__bridge void * _Nullable)(self), NULL);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // 从 mainQueue 中获取不到kDispatchQueueSpecificKey 关联的值
+        // mainQueue: testSpecific: ---------(null)
+        NSLog(@"mainQueue: testSpecific: ---------%@", (__bridge id)dispatch_get_specific(kDispatchQueueSpecificKey));
+    });
+    
+    dispatch_async(queue, ^{
+        // 从 set_specific 指定的队列中可以获得关联的值
+        // queue: testSpecific: ----------[GCDTest testSpecific]
+        NSLog(@"queue: testSpecific: ---------%@", (__bridge id)dispatch_get_specific(kDispatchQueueSpecificKey));
+    });
+}
+
 - (void)testDispatchSync {
     dispatch_queue_t queue = dispatch_queue_create("", DISPATCH_QUEUE_CONCURRENT);
     for (NSInteger index = 01; index < 100; index++) {
