@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+
 @interface ViewController ()
 @property (nonatomic, strong) dispatch_queue_t queue;
 @end
@@ -23,7 +24,8 @@ typedef void(^TestBlock)(void);
 //        });
 //    }
     [self testSemaphort];
-   
+    UIImageView *imageView = [UIImageView new];
+
 }
 
 /*

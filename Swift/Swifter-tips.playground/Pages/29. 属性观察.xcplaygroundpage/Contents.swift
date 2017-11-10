@@ -45,6 +45,7 @@ class B: A {
     }
 }
 
+
 let b = B()
 b.number = 10
 print(b.number)

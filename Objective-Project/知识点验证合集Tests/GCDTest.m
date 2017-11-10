@@ -109,10 +109,12 @@
 static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey;
 - (void)testSpecific {
     dispatch_queue_t queue = dispatch_queue_create("", NULL);
+    // dispatch_queue_set_specific(queue1, queueKey1, &queueKey1,NULL); 就是向queue1对了中设置一个queueKey1标识，关联的值为&queueKey1
     dispatch_queue_set_specific(queue, kDispatchQueueSpecificKey, (__bridge void * _Nullable)(self), NULL);
     dispatch_async(dispatch_get_main_queue(), ^{
         // 从 mainQueue 中获取不到kDispatchQueueSpecificKey 关联的值
         // mainQueue: testSpecific: ---------(null)
+        // dispatch_get_specific就是在当前队列中取出标识
         NSLog(@"mainQueue: testSpecific: ---------%@", (__bridge id)dispatch_get_specific(kDispatchQueueSpecificKey));
     });
     
@@ -130,6 +132,7 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
             NSLog(@"%ld", (long)index);
         });
     }
+    
 }
 
 - (void)testSemaphort {
