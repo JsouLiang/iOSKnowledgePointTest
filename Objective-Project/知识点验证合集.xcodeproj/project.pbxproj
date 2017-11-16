@@ -23,6 +23,8 @@
 		4776160F1FAAAD4700396099 /* MutableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4776160E1FAAAD4700396099 /* MutableDelegate.m */; };
 		477616141FAAB50900396099 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 477616131FAAB50900396099 /* NSObject+KVO.m */; };
 		477616191FAAFA4400396099 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 477616181FAAFA4400396099 /* Algorithm.m */; };
+		4789114F1FBAE80200819507 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4789114E1FBAE80200819507 /* Transaction.m */; };
+		4789115D1FBC37F700819507 /* RunloopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4789115C1FBC37F700819507 /* RunloopTableViewController.m */; };
 		47F795171FA711B40031E93B /* GCDTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F795161FA711B40031E93B /* GCDTest.m */; };
 		47F795671FA74F0F0031E93B /* RuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F795661FA74F0F0031E93B /* RuntimeTest.m */; };
 		47F7956A1FA7618F0031E93B /* Class1.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F795691FA7618F0031E93B /* Class1.m */; };
@@ -52,8 +54,8 @@
 
 /* Begin PBXFileReference section */
 		064AB5745159A14C3533CE84 /* Pods-知识点验证合集.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集.debug.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集/Pods-知识点验证合集.debug.xcconfig"; sourceTree = "<group>"; };
-		205EF605B9F54A02CACCC1F0 /* Pods________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods________.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		207B4F82247D94E1030B532A /* Pods________Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods________Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		205EF605B9F54A02CACCC1F0 /* Pods________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods________.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		207B4F82247D94E1030B532A /* Pods________Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods________Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		472054C81FAB0B6A00AD2A76 /* UploadImgJsonOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadImgJsonOperation.h; sourceTree = "<group>"; };
 		472054C91FAB0B6A00AD2A76 /* UploadImgJsonOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadImgJsonOperation.m; sourceTree = "<group>"; };
 		472054CB1FAB12A100AD2A76 /* Operation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Operation.md; sourceTree = "<group>"; };
@@ -70,7 +72,7 @@
 		472C9EB51FA583E7005481C9 /* 知识点验证合集Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "知识点验证合集Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		472C9EBB1FA583E7005481C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		472C9EC01FA583E7005481C9 /* 知识点验证合集UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "知识点验证合集UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		472C9EC41FA583E7005481C9 /* _______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _______UITests.m; sourceTree = "<group>"; };
+		472C9EC41FA583E7005481C9 /* _______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______UITests.m"; sourceTree = "<group>"; };
 		472C9EC61FA583E7005481C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		472C9ED21FA583F3005481C9 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		472C9ED31FA583F3005481C9 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
@@ -86,6 +88,10 @@
 		477616151FAAE9C800396099 /* 自己实现 KVO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "自己实现 KVO.md"; sourceTree = "<group>"; };
 		477616171FAAFA4400396099 /* Algorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		477616181FAAFA4400396099 /* Algorithm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
+		4789114D1FBAE80200819507 /* Transaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		4789114E1FBAE80200819507 /* Transaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		4789115B1FBC37F700819507 /* RunloopTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopTableViewController.h; sourceTree = "<group>"; };
+		4789115C1FBC37F700819507 /* RunloopTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopTableViewController.m; sourceTree = "<group>"; };
 		47F795161FA711B40031E93B /* GCDTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTest.m; sourceTree = "<group>"; };
 		47F795661FA74F0F0031E93B /* RuntimeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest.m; sourceTree = "<group>"; };
 		47F795681FA7618F0031E93B /* Class1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Class1.h; sourceTree = "<group>"; };
@@ -101,7 +107,7 @@
 		A162103AE178A24B49B35EF1 /* Pods-知识点验证合集UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集UITests/Pods-知识点验证合集UITests.release.xcconfig"; sourceTree = "<group>"; };
 		AF4CFD453E9B819EBA09EF5D /* Pods-知识点验证合集UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集UITests/Pods-知识点验证合集UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC071C4E632D508C0618F84E /* Pods-知识点验证合集Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集Tests/Pods-知识点验证合集Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E2AC1882FE272C3F6949960D /* Pods________UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods________UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2AC1882FE272C3F6949960D /* Pods________UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods________UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,7 @@
 		472C9E9F1FA583E6005481C9 /* 知识点验证合集 */ = {
 			isa = PBXGroup;
 			children = (
+				4789114C1FBAE7D300819507 /* RunLoop */,
 				472054C71FAB0B3900AD2A76 /* NSOperation */,
 				477616161FAAFA2600396099 /* Algorithm */,
 				477616111FAAB4EE00396099 /* CustomerKVO */,
@@ -236,6 +243,17 @@
 				477616181FAAFA4400396099 /* Algorithm.m */,
 			);
 			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		4789114C1FBAE7D300819507 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				4789114D1FBAE80200819507 /* Transaction.h */,
+				4789114E1FBAE80200819507 /* Transaction.m */,
+				4789115B1FBC37F700819507 /* RunloopTableViewController.h */,
+				4789115C1FBC37F700819507 /* RunloopTableViewController.m */,
+			);
+			path = RunLoop;
 			sourceTree = "<group>";
 		};
 		47F795711FA808350031E93B /* LRU */ = {
@@ -597,10 +615,12 @@
 			files = (
 				472C9EA51FA583E6005481C9 /* ViewController.m in Sources */,
 				47F7956D1FA7619B0031E93B /* Class2.m in Sources */,
+				4789114F1FBAE80200819507 /* Transaction.m in Sources */,
 				477616141FAAB50900396099 /* NSObject+KVO.m in Sources */,
 				477616191FAAFA4400396099 /* Algorithm.m in Sources */,
 				472054CA1FAB0B6A00AD2A76 /* UploadImgJsonOperation.m in Sources */,
 				472C9EB01FA583E6005481C9 /* main.m in Sources */,
+				4789115D1FBC37F700819507 /* RunloopTableViewController.m in Sources */,
 				472C9ED41FA583F3005481C9 /* Person.m in Sources */,
 				47F7956A1FA7618F0031E93B /* Class1.m in Sources */,
 				47F795701FA76A080031E93B /* Class3.m in Sources */,
