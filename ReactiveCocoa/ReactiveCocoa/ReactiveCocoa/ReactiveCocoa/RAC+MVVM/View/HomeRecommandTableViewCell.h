@@ -10,9 +10,9 @@
 #import "HomeRecommendItem.h"
 
 @interface HomeRecommandTableViewCell : UITableViewCell
-@property (weak, nonatomic, readwrite) IBOutlet UIImageView *iconView;
-@property (weak, nonatomic, readwrite) IBOutlet UILabel *nameView;
-@property (weak, nonatomic) IBOutlet UIButton *numView;
-@property (nonatomic, strong) HomeRecommendItem *item;
+@property (weak, nonatomic, readonly) IBOutlet UIImageView *iconView;
+@property (weak, nonatomic, readonly) IBOutlet UILabel *nameView;
+@property (weak, nonatomic, readonly) IBOutlet UIButton *numView;
+//@property (nonatomic, strong) HomeRecommendItem *item;
 
 @end

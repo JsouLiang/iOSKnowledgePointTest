@@ -30,7 +30,7 @@
         NSLog(@"%@",error);
     }];
     // 绑定视图模型, 对控件的设置，都放到 bindViewModel 方法中
-    [self.homeControlViewModel bindViewModel: self.tableView];
+    [self.homeControlViewModel bindViewModelForView:self.tableView];
 }
 
 #pragma mark - lazy load

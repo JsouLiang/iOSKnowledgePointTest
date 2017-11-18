@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@class RACCommand;
-@interface HomeControlViewModel : NSObject
+#import "Bindable.h"
+@class RACCommand, HomeCellViewModel;
+@interface HomeControlViewModel : NSObject<Bindable>
 
 @property (nonatomic, strong, readonly) RACCommand *loadHomeDataCommand;
-@property (nonatomic, strong) NSArray *recommands;
-
-- (void)bindViewModel: (UIView *)bindedView;
+//@property (nonatomic, strong) NSArray *recommands;
+@property (nonatomic, strong) NSArray *homeCellModels;
 
 @end

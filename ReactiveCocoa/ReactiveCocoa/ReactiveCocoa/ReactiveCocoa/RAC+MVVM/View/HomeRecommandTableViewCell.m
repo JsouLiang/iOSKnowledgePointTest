@@ -7,14 +7,13 @@
 //
 
 #import "HomeRecommandTableViewCell.h"
-#import <SDWebImage/UIImageView+WebCache.h>
-@implementation HomeRecommandTableViewCell
 
-- (void)setItem:(HomeRecommendItem *)item {
-    _item = item;
-    [self.iconView sd_setImageWithURL:item.courseImage];
-    [self.nameView setText:item.courseName];
-    [self.numView setTitle:item.studentNum forState:UIControlStateNormal];
-}
+@interface HomeRecommandTableViewCell()
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
+@property (weak, nonatomic) IBOutlet UILabel *nameView;
+@property (weak, nonatomic) IBOutlet UIButton *numView;
+@end
+
+@implementation HomeRecommandTableViewCell
 
 @end

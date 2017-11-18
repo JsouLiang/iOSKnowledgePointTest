@@ -13,6 +13,7 @@
 #import "HomeRecommendItem.h"
 #import <MJExtension/MJExtension.h>
 #import "HomeControlViewModel+TableView.h"
+#import "HomeCellViewModel.h"
 static NSString *url = @"https://www.yunke.com/interface/main/home";
 static NSString * const salt = @"gn1002015";
 
@@ -22,8 +23,8 @@ static NSString * const salt = @"gn1002015";
 
 @implementation HomeControlViewModel
 
-- (void)bindViewModel:(UIView *)bindedView {
-    UITableView *tableView = (UITableView *)bindedView;
+- (void)bindViewModelForView:(UIView *)view {
+    UITableView *tableView = (UITableView *)view;
     [tableView registerNib:[UINib nibWithNibName:@"HomeRecommandTableViewCell" bundle:nil] forCellReuseIdentifier:@"HomeRecommandTableViewCell"];
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -42,8 +43,8 @@ static NSString * const salt = @"gn1002015";
                     progress:nil
                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                          // 通过 subscriber 将 response 传递出去
-                         self.recommands = [self parseData:responseObject];
-                         [subscriber sendNext:self.recommands];
+                         self.homeCellModels = [self parseData:responseObject];
+                         [subscriber sendNext:self.homeCellModels];
                          [subscriber sendCompleted];
                      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                          [subscriber sendError:error];
@@ -65,7 +66,12 @@ static NSString * const salt = @"gn1002015";
     
     // 字段转模型
     recommends =  [HomeRecommendItem mj_objectArrayWithKeyValuesArray: recommendsDict[@"courses"]];
-    return recommends;
+    
+    return [[recommends.rac_sequence map:^id _Nullable(id  _Nullable value) {
+        HomeCellViewModel *cellViewModel = [[HomeCellViewModel alloc] init];
+        cellViewModel.item = value;
+        return cellViewModel;
+    }] array] ;
 }
 
 #pragma mark -
