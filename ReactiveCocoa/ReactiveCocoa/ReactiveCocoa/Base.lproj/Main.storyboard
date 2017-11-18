@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cx7-4h-Bjt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,6 +23,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-113" y="54"/>
+        </scene>
+        <!--Command Scene View Controller-->
+        <scene sceneID="wNR-wc-KVU">
+            <objects>
+                <viewController id="cx7-4h-Bjt" customClass="RACCommandSceneViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5sp-6G-Pya">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-Wi-yYs">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PEd-Wi-yYs" firstAttribute="centerX" secondItem="5sp-6G-Pya" secondAttribute="centerX" id="fhF-Xj-OTu"/>
+                            <constraint firstItem="PEd-Wi-yYs" firstAttribute="centerY" secondItem="5sp-6G-Pya" secondAttribute="centerY" id="rwL-mX-l96"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WdF-WX-mrv"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="PEd-Wi-yYs" id="PW2-Em-crl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZK-hH-D3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="41"/>
         </scene>
     </scenes>
 </document>

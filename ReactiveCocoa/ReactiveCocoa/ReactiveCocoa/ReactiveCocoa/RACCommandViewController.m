@@ -38,6 +38,7 @@
         return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
             // 为订阅者发送信息
             [subscriber sendNext:@"你好"];
+            // 此时的订阅者为 RACReplaySubject 类型
             [subscriber sendCompleted]; // 发送完成信息，要不然监听 executing 时永远获得不到执行完成
             return nil;
         }];
@@ -90,7 +91,8 @@
     }];
     // 执行 command 创建时执行的 block，参数作为 block 的 input
     // execute 会返回 command 内部的 signal，所以下面 subscribe 进行订阅 command 内部的 signal
-    [[command execute:@"inputValue"] subscribeNext:^(id  _Nullable x) {
+    RACReplaySubject *subject = [command execute:@"inputValue"];
+    [subject  subscribeNext:^(id  _Nullable x) {
         NSLog(@"next: %@", x);
     } completed:^{}];
 }

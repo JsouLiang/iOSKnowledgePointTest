@@ -45,7 +45,8 @@
     [connection.signal subscribeCompleted:^{}];
     
     // 进行连接
-    // connect 或获得 connection 中保存的最初的 signal，然后进行 subscribe，即执行 signal 指定的 block
+    // connect 获得 connection 中保存的最初的 signal，然后进行 subscribe，即执行 signal 指定的 block
+    // connect 内部操作是时 sourceSignal 订阅内部生产的 signal
     [connection connect];
 }
 
