@@ -6,11 +6,13 @@
 //  Copyright © 2017年 X-Liang. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 @class RACCommand;
 @interface HomeControlViewModel : NSObject
 
 @property (nonatomic, strong, readonly) RACCommand *loadHomeDataCommand;
+@property (nonatomic, strong) NSArray *recommands;
 
+- (void)bindViewModel: (UIView *)bindedView;
 
 @end

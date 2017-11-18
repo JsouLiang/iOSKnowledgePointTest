@@ -8,11 +8,10 @@
 
 #import "RACMVVMViewController.h"
 #import "HomeControlViewModel.h"
+#import "HomeControlViewModel+TableView.h"
 #import <ReactiveObjC/ReactiveObjC.h>
-#import "HomeRecommandTableViewCell.h"
-@interface RACMVVMViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface RACMVVMViewController ()
 @property (nonatomic, strong) HomeControlViewModel *homeControlViewModel;
-@property (nonatomic, strong) NSArray *recommands;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
@@ -25,26 +24,13 @@
     [[self.homeControlViewModel.loadHomeDataCommand execute:nil] subscribeNext:^(id  _Nullable x) {
         @strongify(self)
         NSLog(@"%@",x);
-        self.recommands = x;
+//        self.recommands = x;
         [self.tableView reloadData];
     } error:^(NSError * _Nullable error) {
         NSLog(@"%@",error);
     }];
-    [self.tableView registerNib:[UINib nibWithNibName:@"HomeRecommandTableViewCell" bundle:nil] forCellReuseIdentifier:@"HomeRecommandTableViewCell"];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.recommands.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HomeRecommandTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeRecommandTableViewCell" forIndexPath:indexPath];
-    cell.item = self.recommands[indexPath.row];
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+    // 绑定视图模型, 对控件的设置，都放到 bindViewModel 方法中
+    [self.homeControlViewModel bindViewModel: self.tableView];
 }
 
 #pragma mark - lazy load

@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReactiveCocoa/ReactiveCocoa/RAC+MVVM/ViewModel/HomeControlViewModel.m"
-            timestampString = "532713292.382682"
+            timestampString = "532714247.676462"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "-loadHomeDataCommand"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReactiveCocoa/ReactiveCocoa/RAC+MVVM/ViewModel/HomeControlViewModel.m"
-            timestampString = "532713292.382789"
+            timestampString = "532714247.676889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "-loadHomeDataCommand"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReactiveCocoa/ReactiveCocoa/RAC+MVVM/ViewModel/HomeControlViewModel.m"
-            timestampString = "532713292.382865"
+            timestampString = "532714247.67718"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-loadHomeDataCommand"
             landmarkType = "7">
          </BreakpointContent>

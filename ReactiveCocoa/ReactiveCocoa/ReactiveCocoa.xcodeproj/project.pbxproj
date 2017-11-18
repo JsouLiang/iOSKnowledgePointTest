@@ -10,6 +10,7 @@
 		41BE314C283AF2F09559B0E6 /* libPods-ReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10879B3F2996ECCAF2729741 /* libPods-ReactiveCocoa.a */; };
 		47241C001FC08CC9005624D6 /* HomeRecommandTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47241BFE1FC08CC9005624D6 /* HomeRecommandTableViewCell.m */; };
 		47241C011FC08CC9005624D6 /* HomeRecommandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47241BFF1FC08CC9005624D6 /* HomeRecommandTableViewCell.xib */; };
+		47241C041FC08FFA005624D6 /* HomeControlViewModel+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47241C031FC08FFA005624D6 /* HomeControlViewModel+TableView.m */; };
 		474497261FC02FE500BCCE26 /* RACCommandSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474497251FC02FE500BCCE26 /* RACCommandSceneViewController.m */; };
 		474497291FC0337E00BCCE26 /* RACUsingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474497281FC0337E00BCCE26 /* RACUsingViewController.m */; };
 		4744972E1FC077D100BCCE26 /* RACMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4744972D1FC077D100BCCE26 /* RACMVVMViewController.m */; };
@@ -45,6 +46,8 @@
 		47241BFD1FC08CC9005624D6 /* HomeRecommandTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeRecommandTableViewCell.h; sourceTree = "<group>"; };
 		47241BFE1FC08CC9005624D6 /* HomeRecommandTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeRecommandTableViewCell.m; sourceTree = "<group>"; };
 		47241BFF1FC08CC9005624D6 /* HomeRecommandTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecommandTableViewCell.xib; sourceTree = "<group>"; };
+		47241C021FC08FFA005624D6 /* HomeControlViewModel+TableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeControlViewModel+TableView.h"; sourceTree = "<group>"; };
+		47241C031FC08FFA005624D6 /* HomeControlViewModel+TableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HomeControlViewModel+TableView.m"; sourceTree = "<group>"; };
 		474497241FC02FE500BCCE26 /* RACCommandSceneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACCommandSceneViewController.h; sourceTree = "<group>"; };
 		474497251FC02FE500BCCE26 /* RACCommandSceneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACCommandSceneViewController.m; sourceTree = "<group>"; };
 		474497271FC0337E00BCCE26 /* RACUsingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACUsingViewController.h; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 			children = (
 				474497331FC0786000BCCE26 /* HomeControlViewModel.h */,
 				474497341FC0786000BCCE26 /* HomeControlViewModel.m */,
+				47241C021FC08FFA005624D6 /* HomeControlViewModel+TableView.h */,
+				47241C031FC08FFA005624D6 /* HomeControlViewModel+TableView.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 				475A5AE81FC004AE0081BB48 /* FlagItem.m in Sources */,
 				47D2F2C01FC01EA600614A7E /* RACCommandViewController.m in Sources */,
 				475235661FBDCC3B00240FF7 /* LinkProgram.m in Sources */,
+				47241C041FC08FFA005624D6 /* HomeControlViewModel+TableView.m in Sources */,
 				475235501FBDC5E600240FF7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
