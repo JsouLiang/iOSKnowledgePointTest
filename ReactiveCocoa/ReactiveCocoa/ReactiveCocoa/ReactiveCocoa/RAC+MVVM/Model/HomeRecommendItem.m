@@ -1,13 +1,15 @@
 //
-//  RACViewController.h
+//  HomeCommandItem.m
 //  ReactiveCocoa
 //
 //  Created by X-Liang on 2017/11/18.
 //  Copyright © 2017年 X-Liang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HomeRecommendItem.h"
 
-@interface RACSignalViewController : UIViewController
+@implementation HomeRecommendItem
+
+
 
 @end

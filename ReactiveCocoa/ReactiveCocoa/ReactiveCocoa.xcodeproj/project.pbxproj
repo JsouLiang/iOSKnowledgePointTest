@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		41BE314C283AF2F09559B0E6 /* libPods-ReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10879B3F2996ECCAF2729741 /* libPods-ReactiveCocoa.a */; };
+		47241C001FC08CC9005624D6 /* HomeRecommandTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47241BFE1FC08CC9005624D6 /* HomeRecommandTableViewCell.m */; };
+		47241C011FC08CC9005624D6 /* HomeRecommandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47241BFF1FC08CC9005624D6 /* HomeRecommandTableViewCell.xib */; };
 		474497261FC02FE500BCCE26 /* RACCommandSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474497251FC02FE500BCCE26 /* RACCommandSceneViewController.m */; };
 		474497291FC0337E00BCCE26 /* RACUsingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474497281FC0337E00BCCE26 /* RACUsingViewController.m */; };
+		4744972E1FC077D100BCCE26 /* RACMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4744972D1FC077D100BCCE26 /* RACMVVMViewController.m */; };
+		474497351FC0786000BCCE26 /* HomeControlViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 474497341FC0786000BCCE26 /* HomeControlViewModel.m */; };
+		474497381FC08A1F00BCCE26 /* HomeRecommendItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 474497371FC08A1F00BCCE26 /* HomeRecommendItem.m */; };
 		475235501FBDC5E600240FF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4752354F1FBDC5E600240FF7 /* AppDelegate.m */; };
 		475235531FBDC5E600240FF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475235521FBDC5E600240FF7 /* ViewController.m */; };
 		475235561FBDC5E600240FF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475235541FBDC5E600240FF7 /* Main.storyboard */; };
@@ -37,10 +42,19 @@
 
 /* Begin PBXFileReference section */
 		10879B3F2996ECCAF2729741 /* libPods-ReactiveCocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveCocoa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47241BFD1FC08CC9005624D6 /* HomeRecommandTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeRecommandTableViewCell.h; sourceTree = "<group>"; };
+		47241BFE1FC08CC9005624D6 /* HomeRecommandTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeRecommandTableViewCell.m; sourceTree = "<group>"; };
+		47241BFF1FC08CC9005624D6 /* HomeRecommandTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecommandTableViewCell.xib; sourceTree = "<group>"; };
 		474497241FC02FE500BCCE26 /* RACCommandSceneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACCommandSceneViewController.h; sourceTree = "<group>"; };
 		474497251FC02FE500BCCE26 /* RACCommandSceneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACCommandSceneViewController.m; sourceTree = "<group>"; };
 		474497271FC0337E00BCCE26 /* RACUsingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACUsingViewController.h; sourceTree = "<group>"; };
 		474497281FC0337E00BCCE26 /* RACUsingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACUsingViewController.m; sourceTree = "<group>"; };
+		4744972C1FC077D100BCCE26 /* RACMVVMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACMVVMViewController.h; sourceTree = "<group>"; };
+		4744972D1FC077D100BCCE26 /* RACMVVMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACMVVMViewController.m; sourceTree = "<group>"; };
+		474497331FC0786000BCCE26 /* HomeControlViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeControlViewModel.h; sourceTree = "<group>"; };
+		474497341FC0786000BCCE26 /* HomeControlViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeControlViewModel.m; sourceTree = "<group>"; };
+		474497361FC08A1F00BCCE26 /* HomeRecommendItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeRecommendItem.h; sourceTree = "<group>"; };
+		474497371FC08A1F00BCCE26 /* HomeRecommendItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeRecommendItem.m; sourceTree = "<group>"; };
 		4752354B1FBDC5E600240FF7 /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4752354E1FBDC5E600240FF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4752354F1FBDC5E600240FF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -107,6 +121,79 @@
 				4AA09042D4EA8D787BEC714A /* Pods-ReactiveCocoa.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4744972A1FC075A200BCCE26 /* RAC+MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				474497311FC0782300BCCE26 /* View */,
+				474497301FC0781D00BCCE26 /* Model */,
+				474497321FC0782900BCCE26 /* ViewModel */,
+				4744972F1FC0781200BCCE26 /* Controller */,
+			);
+			path = "RAC+MVVM";
+			sourceTree = "<group>";
+		};
+		4744972B1FC075AD00BCCE26 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				475A5AD81FBFD8B60081BB48 /* RACSignalViewController.h */,
+				475A5AD91FBFD8B60081BB48 /* RACSignalViewController.m */,
+				475A5ADB1FBFEB670081BB48 /* RACSubjectViewController.h */,
+				475A5ADC1FBFEB670081BB48 /* RACSubjectViewController.m */,
+				475A5AE11FC0027F0081BB48 /* RACCollectionViewController.h */,
+				475A5AE21FC0027F0081BB48 /* RACCollectionViewController.m */,
+				475A5AE91FC009440081BB48 /* RACMulticastConnectionViewController.h */,
+				475A5AEA1FC009440081BB48 /* RACMulticastConnectionViewController.m */,
+				47D2F2BE1FC01EA600614A7E /* RACCommandViewController.h */,
+				47D2F2BF1FC01EA600614A7E /* RACCommandViewController.m */,
+				474497241FC02FE500BCCE26 /* RACCommandSceneViewController.h */,
+				474497251FC02FE500BCCE26 /* RACCommandSceneViewController.m */,
+				474497271FC0337E00BCCE26 /* RACUsingViewController.h */,
+				474497281FC0337E00BCCE26 /* RACUsingViewController.m */,
+				475A5AE61FC004AE0081BB48 /* FlagItem.h */,
+				475A5AE71FC004AE0081BB48 /* FlagItem.m */,
+				475A5ADE1FBFFFB80081BB48 /* CustomView.h */,
+				475A5ADF1FBFFFB80081BB48 /* CustomView.m */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		4744972F1FC0781200BCCE26 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4744972C1FC077D100BCCE26 /* RACMVVMViewController.h */,
+				4744972D1FC077D100BCCE26 /* RACMVVMViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		474497301FC0781D00BCCE26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				474497361FC08A1F00BCCE26 /* HomeRecommendItem.h */,
+				474497371FC08A1F00BCCE26 /* HomeRecommendItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		474497311FC0782300BCCE26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47241BFD1FC08CC9005624D6 /* HomeRecommandTableViewCell.h */,
+				47241BFE1FC08CC9005624D6 /* HomeRecommandTableViewCell.m */,
+				47241BFF1FC08CC9005624D6 /* HomeRecommandTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		474497321FC0782900BCCE26 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				474497331FC0786000BCCE26 /* HomeControlViewModel.h */,
+				474497341FC0786000BCCE26 /* HomeControlViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		475235421FBDC5E600240FF7 = {
@@ -190,24 +277,8 @@
 		475A5AD71FBFD8A50081BB48 /* ReactiveCocoa */ = {
 			isa = PBXGroup;
 			children = (
-				475A5AD81FBFD8B60081BB48 /* RACSignalViewController.h */,
-				475A5AD91FBFD8B60081BB48 /* RACSignalViewController.m */,
-				475A5ADB1FBFEB670081BB48 /* RACSubjectViewController.h */,
-				475A5ADC1FBFEB670081BB48 /* RACSubjectViewController.m */,
-				475A5AE11FC0027F0081BB48 /* RACCollectionViewController.h */,
-				475A5AE21FC0027F0081BB48 /* RACCollectionViewController.m */,
-				475A5AE91FC009440081BB48 /* RACMulticastConnectionViewController.h */,
-				475A5AEA1FC009440081BB48 /* RACMulticastConnectionViewController.m */,
-				47D2F2BE1FC01EA600614A7E /* RACCommandViewController.h */,
-				47D2F2BF1FC01EA600614A7E /* RACCommandViewController.m */,
-				474497241FC02FE500BCCE26 /* RACCommandSceneViewController.h */,
-				474497251FC02FE500BCCE26 /* RACCommandSceneViewController.m */,
-				474497271FC0337E00BCCE26 /* RACUsingViewController.h */,
-				474497281FC0337E00BCCE26 /* RACUsingViewController.m */,
-				475A5AE61FC004AE0081BB48 /* FlagItem.h */,
-				475A5AE71FC004AE0081BB48 /* FlagItem.m */,
-				475A5ADE1FBFFFB80081BB48 /* CustomView.h */,
-				475A5ADF1FBFFFB80081BB48 /* CustomView.m */,
+				4744972B1FC075AD00BCCE26 /* Basic */,
+				4744972A1FC075A200BCCE26 /* RAC+MVVM */,
 			);
 			path = ReactiveCocoa;
 			sourceTree = "<group>";
@@ -283,6 +354,7 @@
 			files = (
 				4752355B1FBDC5E600240FF7 /* LaunchScreen.storyboard in Resources */,
 				475235581FBDC5E600240FF7 /* Assets.xcassets in Resources */,
+				47241C011FC08CC9005624D6 /* HomeRecommandTableViewCell.xib in Resources */,
 				475A5AE51FC003390081BB48 /* flags.plist in Resources */,
 				475235561FBDC5E600240FF7 /* Main.storyboard in Resources */,
 			);
@@ -349,6 +421,7 @@
 				4785DFEF1FBF33DF0084A13F /* Person.m in Sources */,
 				4785DFF81FBF37B90084A13F /* NSKVONotifying_Person.m in Sources */,
 				475235531FBDC5E600240FF7 /* ViewController.m in Sources */,
+				4744972E1FC077D100BCCE26 /* RACMVVMViewController.m in Sources */,
 				475A5AD61FBFD0B00081BB48 /* FunctionalViewController.m in Sources */,
 				475A5ADD1FBFEB670081BB48 /* RACSubjectViewController.m in Sources */,
 				474497291FC0337E00BCCE26 /* RACUsingViewController.m in Sources */,
@@ -362,7 +435,10 @@
 				474497261FC02FE500BCCE26 /* RACCommandSceneViewController.m in Sources */,
 				4785DFF51FBF365A0084A13F /* NSObject+KVO.m in Sources */,
 				4752355E1FBDC5E600240FF7 /* main.m in Sources */,
+				474497351FC0786000BCCE26 /* HomeControlViewModel.m in Sources */,
+				47241C001FC08CC9005624D6 /* HomeRecommandTableViewCell.m in Sources */,
 				475A5AD31FBFCED50081BB48 /* Calculation.m in Sources */,
+				474497381FC08A1F00BCCE26 /* HomeRecommendItem.m in Sources */,
 				475A5AE81FC004AE0081BB48 /* FlagItem.m in Sources */,
 				47D2F2C01FC01EA600614A7E /* RACCommandViewController.m in Sources */,
 				475235661FBDCC3B00240FF7 /* LinkProgram.m in Sources */,
