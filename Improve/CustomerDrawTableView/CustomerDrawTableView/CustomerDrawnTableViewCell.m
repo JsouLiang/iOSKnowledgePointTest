@@ -45,10 +45,44 @@ static UIFont *timeTitleFont;
     if (self.highlighted || self.selected) {
         CGContextSetFillColorWithColor(context, [UIColor blueColor].CGColor);
         CGContextFillRect(context, rect);
-        CGContextSetFillColorWithColor(context, titleColor.CGColor);
+//        CGContextSetFillColorWithColor(context, titleColor.CGColor);
     } else {
-        
+        CGContextSetFillColorWithColor(context, [UIColor blueColor].CGColor);
+        CGContextFillRect(context, rect);
+//        CGContextSetFillColorWithColor(context, titleColor.CGColor);
     }
+    [titleColor set];
+    
+    [_thumbnail drawInRect:CGRectMake(12, 4, 35, 35)];
+    [_title drawAtPoint:CGPointMake(54, 3)
+               forWidth:200
+               withFont:titleFont
+               fontSize:17
+          lineBreakMode:UILineBreakModeTailTruncation
+     baselineAdjustment:UIBaselineAdjustmentAlignCenters];
+    
+    [subTitleColor set];
+    [_subTitle drawAtPoint:CGPointMake(54, 23)
+                  forWidth:200
+                  withFont:subTitleFont
+                  fontSize:13
+             lineBreakMode:UILineBreakModeTailTruncation
+        baselineAdjustment:UIBaselineAdjustmentAlignCenters];
+    
+    [timeTitleColor set];
+    [_timeTile drawAtPoint:CGPointMake(262, 3)
+                   forWidth:62
+                   withFont:timeTitleFont
+                   fontSize:10
+              lineBreakMode:UILineBreakModeTailTruncation
+         baselineAdjustment:UIBaselineAdjustmentAlignCenters];
+
 }
+
+//- (void)fillRect: (CGRect)rect ofContext: (CGContextRef)context {
+//    CGContextSetFillColorWithColor(context, [UIColor blueColor].CGColor);
+//    CGContextFillRect(context, rect);
+//    CGContextSetFillColorWithColor(context, titleColor.CGColor);
+//}
 
 @end
