@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41BE314C283AF2F09559B0E6 /* libPods-ReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10879B3F2996ECCAF2729741 /* libPods-ReactiveCocoa.a */; };
 		474497261FC02FE500BCCE26 /* RACCommandSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474497251FC02FE500BCCE26 /* RACCommandSceneViewController.m */; };
+		474497291FC0337E00BCCE26 /* RACUsingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474497281FC0337E00BCCE26 /* RACUsingViewController.m */; };
 		475235501FBDC5E600240FF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4752354F1FBDC5E600240FF7 /* AppDelegate.m */; };
 		475235531FBDC5E600240FF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475235521FBDC5E600240FF7 /* ViewController.m */; };
 		475235561FBDC5E600240FF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475235541FBDC5E600240FF7 /* Main.storyboard */; };
@@ -38,6 +39,8 @@
 		10879B3F2996ECCAF2729741 /* libPods-ReactiveCocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveCocoa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		474497241FC02FE500BCCE26 /* RACCommandSceneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACCommandSceneViewController.h; sourceTree = "<group>"; };
 		474497251FC02FE500BCCE26 /* RACCommandSceneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACCommandSceneViewController.m; sourceTree = "<group>"; };
+		474497271FC0337E00BCCE26 /* RACUsingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACUsingViewController.h; sourceTree = "<group>"; };
+		474497281FC0337E00BCCE26 /* RACUsingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACUsingViewController.m; sourceTree = "<group>"; };
 		4752354B1FBDC5E600240FF7 /* ReactiveCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4752354E1FBDC5E600240FF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4752354F1FBDC5E600240FF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -199,6 +202,8 @@
 				47D2F2BF1FC01EA600614A7E /* RACCommandViewController.m */,
 				474497241FC02FE500BCCE26 /* RACCommandSceneViewController.h */,
 				474497251FC02FE500BCCE26 /* RACCommandSceneViewController.m */,
+				474497271FC0337E00BCCE26 /* RACUsingViewController.h */,
+				474497281FC0337E00BCCE26 /* RACUsingViewController.m */,
 				475A5AE61FC004AE0081BB48 /* FlagItem.h */,
 				475A5AE71FC004AE0081BB48 /* FlagItem.m */,
 				475A5ADE1FBFFFB80081BB48 /* CustomView.h */,
@@ -346,6 +351,7 @@
 				475235531FBDC5E600240FF7 /* ViewController.m in Sources */,
 				475A5AD61FBFD0B00081BB48 /* FunctionalViewController.m in Sources */,
 				475A5ADD1FBFEB670081BB48 /* RACSubjectViewController.m in Sources */,
+				474497291FC0337E00BCCE26 /* RACUsingViewController.m in Sources */,
 				475A5AE01FBFFFB80081BB48 /* CustomView.m in Sources */,
 				4785DFF21FBF33EB0084A13F /* TestKVOViewController.m in Sources */,
 				4752356A1FBDCFB500240FF7 /* CalculationMachine.m in Sources */,
