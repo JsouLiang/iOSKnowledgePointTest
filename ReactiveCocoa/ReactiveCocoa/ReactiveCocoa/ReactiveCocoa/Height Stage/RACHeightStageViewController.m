@@ -29,7 +29,9 @@
     //    [self then];
     //    [self merge];
     //    [self zip];
-    [self combineReduce];
+    //    [self combineReduce];
+    //    [self filter];
+    [self racTimer];
 }
 #pragma mark - Hook
 /**
@@ -275,20 +277,55 @@
     
     // 只要对象遵循 NSFastEnumeration 协议，就可以使用下标访问
     // reduce: 把多个信号的值聚合为一个值, 聚合几个信号，block 就有几个入参
-//    [[RACSignal combineLatest:@[self.textField.rac_textSignal, self.pswTextField.rac_textSignal]
-//                       reduce:^id (NSString *account, NSString *pwd){
-//                           NSLog(@"%@-%@", account, pwd);
-////                           return [NSString stringWithFormat:@"用户名: %@, 密码: %@", account, pwd];
-//                           return @(account.length > 0 && pwd.length > 0);
-//                       }] subscribeNext:^(id  _Nullable x) {
-////                           NSLog(@"%@", x);
-//                           self.loginButton.enabled = [x boolValue];
-//                       }] ;
+    //    [[RACSignal combineLatest:@[self.textField.rac_textSignal, self.pswTextField.rac_textSignal]
+    //                       reduce:^id (NSString *account, NSString *pwd){
+    //                           NSLog(@"%@-%@", account, pwd);
+    ////                           return [NSString stringWithFormat:@"用户名: %@, 密码: %@", account, pwd];
+    //                           return @(account.length > 0 && pwd.length > 0);
+    //                       }] subscribeNext:^(id  _Nullable x) {
+    ////                           NSLog(@"%@", x);
+    //                           self.loginButton.enabled = [x boolValue];
+    //                       }] ;
     
     // 直接使用 RAC 绑定
     RAC(self.loginButton, enabled) = [RACSignal combineLatest:@[self.textField.rac_textSignal, self.pswTextField.rac_textSignal] reduce:^id (NSString *account, NSString *pwd){
         return @(account.length > 0 && pwd.length > 0);
     }];
+}
+
+#pragma mark - filter
+//filter 如果返回 YES 才允许通过发送数据
+// 返回 NO，不会执行信号发送
+- (void)filter {
+    // 密码长度大于某个值
+    [[self.pswTextField.rac_textSignal filter:^BOOL(NSString * _Nullable value) {
+        if (value.length < 6) {
+            return NO;
+        }
+        return YES;
+    }] subscribeNext:^(NSString * _Nullable x) {
+        NSLog(@"%@",x);
+    }] ;
+}
+
+#pragma mark - Timer
+- (void)racTimer {
+    // interval 隔多少秒发送信号
+    // RACScheduler: 管理 RAC 中多线程
+    [[RACSignal interval:1
+             onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSDate * _Nullable x) {
+        NSLog(@"Timer");
+    }];
+    
+    // 延时操作
+    [[[RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        NSLog(@"执行 signal block");
+        [subscriber sendNext:@"Hello"];
+        return nil;
+    }] delay:2]     // 延迟2s 发送数据
+     subscribeNext:^(id  _Nullable x) {
+         NSLog(@"%@",x);
+     }];
 }
 
 @end
