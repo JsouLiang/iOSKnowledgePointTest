@@ -14,6 +14,8 @@
  */
 @interface RACHeightStageViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextField *pswTextField;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
@@ -22,11 +24,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self racHook];
-//    [self flattenMap];
-//    [self then];
-//    [self merge];
-    [self zip];
+    //    [self racHook];
+    //    [self flattenMap];
+    //    [self then];
+    //    [self merge];
+    //    [self zip];
+    [self combineReduce];
 }
 #pragma mark - Hook
 /**
@@ -38,7 +41,7 @@
         NSLog(@"bind block");
         return ^RACSignal *(id value, BOOL *stop) {
             // 信号一改变，就会执行该 block，并且把值传递过来
-//            NSLog(@"Signal Bind block %@", value);
+            //            NSLog(@"Signal Bind block %@", value);
             NSString *machinedValue = [NSString stringWithFormat:@"%@-",value];
             return [RACReturnSignal return: machinedValue];
         };
@@ -62,7 +65,7 @@
     }] subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@",x);
     }];;
-   
+    
 }
 
 - (void)flattenMap {
@@ -70,14 +73,14 @@
     RACSubject *signal = [RACSubject subject];
     
     //   直接再次订阅信号中的信号
-//    [signalOfSignale subscribeNext:^(id  _Nullable x) {
-//        // x 为信号
-//        [x subscribeNext:^(id  _Nullable x) {
-//            // x 为值
-//            NSLog(@"%@",x);     // 1
-//        }];
-//    }];
-
+    //    [signalOfSignale subscribeNext:^(id  _Nullable x) {
+    //        // x 为信号
+    //        [x subscribeNext:^(id  _Nullable x) {
+    //            // x 为值
+    //            NSLog(@"%@",x);     // 1
+    //        }];
+    //    }];
+    
     //   使用 flattenMap 对信号中的信号进行修改
     [[signalOfSignale flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
         // 对信号中的值进行修改
@@ -93,14 +96,14 @@
     
     [signalOfSignale sendNext:signal];
     [signal sendNext:@"1"];
-
+    
     // flattenMap 返回的是信号，用于信号中的信号
-//    [[self.textField.rac_textSignal flattenMap:^__kindof RACSignal * _Nullable(NSString * _Nullable value) {
-//        NSString *result = [NSString stringWithFormat:@"%@(^_^)",value];
-//        return [RACReturnSignal return:result];
-//    }] subscribeNext:^(id  _Nullable x) {
-//        NSLog(@"%@",x);
-//    }];
+    //    [[self.textField.rac_textSignal flattenMap:^__kindof RACSignal * _Nullable(NSString * _Nullable value) {
+    //        NSString *result = [NSString stringWithFormat:@"%@(^_^)",value];
+    //        return [RACReturnSignal return:result];
+    //    }] subscribeNext:^(id  _Nullable x) {
+    //        NSLog(@"%@",x);
+    //    }];
 }
 
 #pragma mark - concat
@@ -115,12 +118,12 @@
     // B 在 A 后面，可能在发送信息的时候，还没有订阅，所以这里使用 RACReplaySubject，先发送后订阅
     RACReplaySubject *signalB = [RACReplaySubject subject];
     // 分别订阅 A，B
-//    [signalA subscribeNext:^(id  _Nullable x) {[array addObject:x];}];
-//    [signalB subscribeNext:^(id  _Nullable x) {[array addObject:x];}];
-//    // 发送信号, 先发送 A，后发送 B，没问题
-//    // 但是请求中，由于网络数据的原因，A，B 谁先发送信号并不确定，所以可能出现先发送 B 后发送 A，这样就会出现问题
-//    [signalA sendNext:@"A"];
-//    [signalB sendNext:@"B"];
+    //    [signalA subscribeNext:^(id  _Nullable x) {[array addObject:x];}];
+    //    [signalB subscribeNext:^(id  _Nullable x) {[array addObject:x];}];
+    //    // 发送信号, 先发送 A，后发送 B，没问题
+    //    // 但是请求中，由于网络数据的原因，A，B 谁先发送信号并不确定，所以可能出现先发送 B 后发送 A，这样就会出现问题
+    //    [signalA sendNext:@"A"];
+    //    [signalB sendNext:@"B"];
     
     // 使用 concat 解决，concat 按顺序拼接，必须要第一个信号发送完成，第二个信号才能获取值
     [[signalA concat:signalB] subscribeNext:^(id  _Nullable x) {
@@ -158,16 +161,16 @@
         [subscriber sendCompleted];
         return nil;
     }];
-
-//    [[signalA then:^RACSignal * _Nonnull{
-//        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-//            NSLog(@"执行信号 B");
-//            [subscriber sendNext:@"B"];
-//            return nil;
-//        }];
-//    }] subscribeNext:^(id  _Nullable x) {
-//        NSLog(@"%@",x);
-//    }] ;
+    
+    //    [[signalA then:^RACSignal * _Nonnull{
+    //        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+    //            NSLog(@"执行信号 B");
+    //            [subscriber sendNext:@"B"];
+    //            return nil;
+    //        }];
+    //    }] subscribeNext:^(id  _Nullable x) {
+    //        NSLog(@"%@",x);
+    //    }] ;
     
     // then 可以解决 blok 的嵌套问题
     // 请求界面数据，第二个请求基于第一个请求结束
@@ -249,4 +252,43 @@
     [subjectA sendNext:@"A"];
     [subjectB sendNext:@"B"];
 }
+
+#pragma mark - combineLatest reduce
+/*
+ combineLatest: 合并
+ reduce: 聚合
+ */
+- (void)combineReduce {
+    // 当两个文本框都有内容时，才能允许登录按钮点击
+    // 监听账号文本框
+    //    [self.textField.rac_textSignal subscribeNext:^(NSString * _Nullable x) {}];
+    // 监听密码文本框
+    //    [self.pswTextField.rac_textSignal subscribeNext:^(NSString * _Nullable x) {}];
+    
+    // combine 不同于 zip，combine 任何一个信号只要发生变化就能订阅得到
+    // zip必须所有的信号都发声改变
+    //    [[self.textField.rac_textSignal combineLatestWith:self.pswTextField.rac_textSignal] subscribeNext:^(RACTwoTuple<NSString *,id> * _Nullable x) {
+    //        RACTupleUnpack(NSString *account, NSString *password) = x;
+    //        self.loginButton.enabled = account.length > 0 && password.length > 0;
+    //        NSLog(@"%@-%@",account, password);
+    //    }];
+    
+    // 只要对象遵循 NSFastEnumeration 协议，就可以使用下标访问
+    // reduce: 把多个信号的值聚合为一个值, 聚合几个信号，block 就有几个入参
+//    [[RACSignal combineLatest:@[self.textField.rac_textSignal, self.pswTextField.rac_textSignal]
+//                       reduce:^id (NSString *account, NSString *pwd){
+//                           NSLog(@"%@-%@", account, pwd);
+////                           return [NSString stringWithFormat:@"用户名: %@, 密码: %@", account, pwd];
+//                           return @(account.length > 0 && pwd.length > 0);
+//                       }] subscribeNext:^(id  _Nullable x) {
+////                           NSLog(@"%@", x);
+//                           self.loginButton.enabled = [x boolValue];
+//                       }] ;
+    
+    // 直接使用 RAC 绑定
+    RAC(self.loginButton, enabled) = [RACSignal combineLatest:@[self.textField.rac_textSignal, self.pswTextField.rac_textSignal] reduce:^id (NSString *account, NSString *pwd){
+        return @(account.length > 0 && pwd.length > 0);
+    }];
+}
+
 @end
