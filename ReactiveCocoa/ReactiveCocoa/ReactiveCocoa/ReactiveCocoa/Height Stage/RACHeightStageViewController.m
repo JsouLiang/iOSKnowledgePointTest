@@ -24,8 +24,11 @@
     [super viewDidLoad];
 //    [self racHook];
 //    [self flattenMap];
-    [self then];
+//    [self then];
+//    [self merge];
+    [self zip];
 }
+#pragma mark - Hook
 /**
  RAC Hook 思想
  */
@@ -44,6 +47,7 @@
     }];
 }
 
+#pragma mark - flattenMap Map
 /**
  flatMap，Map
  都可以用于将源信号中的内容映射成新的内容
@@ -99,6 +103,7 @@
 //    }];
 }
 
+#pragma mark - concat
 /**
  RAC concat: 按一定顺序拼接信号，当多个信号发出的时候，有序的接受信号
  信号拼接
@@ -141,7 +146,7 @@
     });
     
 }
-
+#pragma mark - Then
 /**
  RAC then: 用于连接两个信号，当地一个信号完成，才会连接 then 返回的信号，拿不到上一个信号的值，只能获取当前一个信号的值
  then拼接，忽略上一个信号的值
@@ -178,7 +183,7 @@
         }];
     }];
 }
-// RAC Then 请求
+#pragma mark - RAC Then 请求
 - (void)loadDataWithRACThen {
     [[[self loadCategory] then:^RACSignal * _Nonnull{
         return [self loadDetailData];
@@ -209,7 +214,6 @@
     return subject;
 }
 
-
 - (void)loadCategory: (void (^)(id data))success {
     success(@"loadCategory");
 }
@@ -217,5 +221,32 @@
     success(@"loadDetail");
 }
 
+#pragma mark - merge
+/*
+ concat, then 必须要前一个 signal 发送 complete，下个信号才能接受订阅
+ merge：只要任何一个数据发送数据，就能接收到订阅，无关于顺序，谁先发送，谁先接收信号
+ */
+- (void)merge {
+    RACSubject *subjectA = [RACSubject subject];
+    RACSubject *subjectB = [RACSubject subject];
+    [[subjectA merge:subjectB] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    [subjectA sendNext:@"A"];
+    [subjectB sendNext:@"B"];
+}
 
+#pragma mark - zipWith
+// ZipWith 把信号压缩
+// zip 要同时发送多个信号。比如下面的 A，B，zip 将 AB 信号的内容压缩为一个 Tuple
+- (void)zip {
+    RACSubject *subjectA = [RACSubject subject];
+    RACSubject *subjectB = [RACSubject subject];
+    [[subjectA zipWith:subjectB] subscribeNext:^(id  _Nullable x) {
+        RACTupleUnpack(NSString *a, NSString *b) = x;
+        NSLog(@"%@-%@",a, b);
+    }];
+    [subjectA sendNext:@"A"];
+    [subjectB sendNext:@"B"];
+}
 @end
