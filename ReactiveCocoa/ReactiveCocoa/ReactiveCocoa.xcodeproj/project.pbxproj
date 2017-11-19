@@ -12,6 +12,7 @@
 		47241C011FC08CC9005624D6 /* HomeRecommandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47241BFF1FC08CC9005624D6 /* HomeRecommandTableViewCell.xib */; };
 		47241C041FC08FFA005624D6 /* HomeControlViewModel+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47241C031FC08FFA005624D6 /* HomeControlViewModel+TableView.m */; };
 		47241C071FC09398005624D6 /* HomeCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47241C061FC09398005624D6 /* HomeCellViewModel.m */; };
+		47241C0C1FC11E66005624D6 /* RACHeightStageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47241C0B1FC11E66005624D6 /* RACHeightStageViewController.m */; };
 		474497261FC02FE500BCCE26 /* RACCommandSceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474497251FC02FE500BCCE26 /* RACCommandSceneViewController.m */; };
 		474497291FC0337E00BCCE26 /* RACUsingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474497281FC0337E00BCCE26 /* RACUsingViewController.m */; };
 		4744972E1FC077D100BCCE26 /* RACMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4744972D1FC077D100BCCE26 /* RACMVVMViewController.m */; };
@@ -52,6 +53,8 @@
 		47241C051FC09398005624D6 /* HomeCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCellViewModel.h; sourceTree = "<group>"; };
 		47241C061FC09398005624D6 /* HomeCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCellViewModel.m; sourceTree = "<group>"; };
 		47241C081FC0980E005624D6 /* Bindable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bindable.h; sourceTree = "<group>"; };
+		47241C0A1FC11E66005624D6 /* RACHeightStageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACHeightStageViewController.h; sourceTree = "<group>"; };
+		47241C0B1FC11E66005624D6 /* RACHeightStageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACHeightStageViewController.m; sourceTree = "<group>"; };
 		474497241FC02FE500BCCE26 /* RACCommandSceneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACCommandSceneViewController.h; sourceTree = "<group>"; };
 		474497251FC02FE500BCCE26 /* RACCommandSceneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACCommandSceneViewController.m; sourceTree = "<group>"; };
 		474497271FC0337E00BCCE26 /* RACUsingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACUsingViewController.h; sourceTree = "<group>"; };
@@ -130,6 +133,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		47241C091FC11E3F005624D6 /* Height Stage */ = {
+			isa = PBXGroup;
+			children = (
+				47241C0A1FC11E66005624D6 /* RACHeightStageViewController.h */,
+				47241C0B1FC11E66005624D6 /* RACHeightStageViewController.m */,
+			);
+			path = "Height Stage";
+			sourceTree = "<group>";
+		};
 		4744972A1FC075A200BCCE26 /* RAC+MVVM */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,7 +153,7 @@
 			path = "RAC+MVVM";
 			sourceTree = "<group>";
 		};
-		4744972B1FC075AD00BCCE26 /* Basic */ = {
+		4744972B1FC075AD00BCCE26 /* Basic Stage */ = {
 			isa = PBXGroup;
 			children = (
 				475A5AD81FBFD8B60081BB48 /* RACSignalViewController.h */,
@@ -163,7 +175,7 @@
 				475A5ADE1FBFFFB80081BB48 /* CustomView.h */,
 				475A5ADF1FBFFFB80081BB48 /* CustomView.m */,
 			);
-			path = Basic;
+			path = "Basic Stage";
 			sourceTree = "<group>";
 		};
 		4744972F1FC0781200BCCE26 /* Controller */ = {
@@ -289,7 +301,8 @@
 		475A5AD71FBFD8A50081BB48 /* ReactiveCocoa */ = {
 			isa = PBXGroup;
 			children = (
-				4744972B1FC075AD00BCCE26 /* Basic */,
+				4744972B1FC075AD00BCCE26 /* Basic Stage */,
+				47241C091FC11E3F005624D6 /* Height Stage */,
 				4744972A1FC075A200BCCE26 /* RAC+MVVM */,
 			);
 			path = ReactiveCocoa;
@@ -453,6 +466,7 @@
 				474497381FC08A1F00BCCE26 /* HomeRecommendItem.m in Sources */,
 				475A5AE81FC004AE0081BB48 /* FlagItem.m in Sources */,
 				47D2F2C01FC01EA600614A7E /* RACCommandViewController.m in Sources */,
+				47241C0C1FC11E66005624D6 /* RACHeightStageViewController.m in Sources */,
 				47241C071FC09398005624D6 /* HomeCellViewModel.m in Sources */,
 				475235661FBDCC3B00240FF7 /* LinkProgram.m in Sources */,
 				47241C041FC08FFA005624D6 /* HomeControlViewModel+TableView.m in Sources */,

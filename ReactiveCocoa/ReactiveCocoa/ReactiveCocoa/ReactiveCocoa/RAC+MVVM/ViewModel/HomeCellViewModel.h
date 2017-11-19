@@ -12,5 +12,4 @@
 // 处理 Cell 的显示和业务逻辑
 @interface HomeCellViewModel : NSObject<Bindable>
 @property (nonatomic, strong) HomeRecommendItem *item;
-
 @end
