@@ -20,6 +20,10 @@
 		472C9ED71FA586AA005481C9 /* KVCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9ED61FA586AA005481C9 /* KVCTest.m */; };
 		472C9ED91FA586B6005481C9 /* KVOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9ED81FA586B6005481C9 /* KVOTest.m */; };
 		472C9EDB1FA586BF005481C9 /* KVVTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 472C9EDA1FA586BF005481C9 /* KVVTest.m */; };
+		47488A3E1FCE5C4D00E992FC /* AFNTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 47488A3D1FCE5C4D00E992FC /* AFNTest.m */; };
+		47488AF51FCECC4E00E992FC /* DynamicChangeMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47488AF41FCECC4E00E992FC /* DynamicChangeMethodViewController.m */; };
+		47488AF81FCECC9600E992FC /* NSObject+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 47488AF71FCECC9600E992FC /* NSObject+Hook.m */; };
+		47488AFB1FCECD0900E992FC /* SubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 47488AFA1FCECD0900E992FC /* SubClass.m */; };
 		4776160F1FAAAD4700396099 /* MutableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4776160E1FAAAD4700396099 /* MutableDelegate.m */; };
 		477616141FAAB50900396099 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 477616131FAAB50900396099 /* NSObject+KVO.m */; };
 		477616191FAAFA4400396099 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 477616181FAAFA4400396099 /* Algorithm.m */; };
@@ -80,6 +84,13 @@
 		472C9ED61FA586AA005481C9 /* KVCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCTest.m; sourceTree = "<group>"; };
 		472C9ED81FA586B6005481C9 /* KVOTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOTest.m; sourceTree = "<group>"; };
 		472C9EDA1FA586BF005481C9 /* KVVTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVVTest.m; sourceTree = "<group>"; };
+		47488A3D1FCE5C4D00E992FC /* AFNTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNTest.m; sourceTree = "<group>"; };
+		47488AF31FCECC4E00E992FC /* DynamicChangeMethodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicChangeMethodViewController.h; sourceTree = "<group>"; };
+		47488AF41FCECC4E00E992FC /* DynamicChangeMethodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicChangeMethodViewController.m; sourceTree = "<group>"; };
+		47488AF61FCECC9600E992FC /* NSObject+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Hook.h"; sourceTree = "<group>"; };
+		47488AF71FCECC9600E992FC /* NSObject+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Hook.m"; sourceTree = "<group>"; };
+		47488AF91FCECD0900E992FC /* SubClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubClass.h; sourceTree = "<group>"; };
+		47488AFA1FCECD0900E992FC /* SubClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubClass.m; sourceTree = "<group>"; };
 		4776160D1FAAAD4700396099 /* MutableDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutableDelegate.h; sourceTree = "<group>"; };
 		4776160E1FAAAD4700396099 /* MutableDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutableDelegate.m; sourceTree = "<group>"; };
 		477616101FAAB4E000396099 /* 多重代码.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "多重代码.md"; sourceTree = "<group>"; };
@@ -173,6 +184,7 @@
 		472C9E9F1FA583E6005481C9 /* 知识点验证合集 */ = {
 			isa = PBXGroup;
 			children = (
+				47488AF21FCECC2E00E992FC /* 动态替换实例方法 */,
 				4789114C1FBAE7D300819507 /* RunLoop */,
 				472054C71FAB0B3900AD2A76 /* NSOperation */,
 				477616161FAAFA2600396099 /* Algorithm */,
@@ -200,9 +212,10 @@
 				47F795161FA711B40031E93B /* GCDTest.m */,
 				472C9ED81FA586B6005481C9 /* KVOTest.m */,
 				472C9ED61FA586AA005481C9 /* KVCTest.m */,
-				472C9EDA1FA586BF005481C9 /* KVVTest.m */,
-				472C9EBB1FA583E7005481C9 /* Info.plist */,
 				47F795661FA74F0F0031E93B /* RuntimeTest.m */,
+				472C9EDA1FA586BF005481C9 /* KVVTest.m */,
+				47488A3D1FCE5C4D00E992FC /* AFNTest.m */,
+				472C9EBB1FA583E7005481C9 /* Info.plist */,
 			);
 			path = "知识点验证合集Tests";
 			sourceTree = "<group>";
@@ -214,6 +227,19 @@
 				472C9EC61FA583E7005481C9 /* Info.plist */,
 			);
 			path = "知识点验证合集UITests";
+			sourceTree = "<group>";
+		};
+		47488AF21FCECC2E00E992FC /* 动态替换实例方法 */ = {
+			isa = PBXGroup;
+			children = (
+				47488AF31FCECC4E00E992FC /* DynamicChangeMethodViewController.h */,
+				47488AF41FCECC4E00E992FC /* DynamicChangeMethodViewController.m */,
+				47488AF91FCECD0900E992FC /* SubClass.h */,
+				47488AFA1FCECD0900E992FC /* SubClass.m */,
+				47488AF61FCECC9600E992FC /* NSObject+Hook.h */,
+				47488AF71FCECC9600E992FC /* NSObject+Hook.m */,
+			);
+			path = "动态替换实例方法";
 			sourceTree = "<group>";
 		};
 		4776160C1FAAAC2500396099 /* MutableDelegate */ = {
@@ -613,6 +639,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47488AF51FCECC4E00E992FC /* DynamicChangeMethodViewController.m in Sources */,
 				472C9EA51FA583E6005481C9 /* ViewController.m in Sources */,
 				47F7956D1FA7619B0031E93B /* Class2.m in Sources */,
 				4789114F1FBAE80200819507 /* Transaction.m in Sources */,
@@ -626,7 +653,9 @@
 				47F795701FA76A080031E93B /* Class3.m in Sources */,
 				472C9EA21FA583E6005481C9 /* AppDelegate.m in Sources */,
 				47F795781FA809F30031E93B /* LRUCacheStrategy.m in Sources */,
+				47488AF81FCECC9600E992FC /* NSObject+Hook.m in Sources */,
 				4776160F1FAAAD4700396099 /* MutableDelegate.m in Sources */,
+				47488AFB1FCECD0900E992FC /* SubClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				472C9ED71FA586AA005481C9 /* KVCTest.m in Sources */,
+				47488A3E1FCE5C4D00E992FC /* AFNTest.m in Sources */,
 				47F795671FA74F0F0031E93B /* RuntimeTest.m in Sources */,
 				472C9ED91FA586B6005481C9 /* KVOTest.m in Sources */,
 				47F795171FA711B40031E93B /* GCDTest.m in Sources */,

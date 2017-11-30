@@ -259,11 +259,13 @@
                                          failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
     NSError *serializationError = nil;
+    // 根据参数创建一个 request
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters error:&serializationError];
     if (serializationError) {
         if (failure) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wgnu"
+            //如果解析错误，直接返回
             dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
                 failure(nil, serializationError);
             });
@@ -274,6 +276,9 @@
     }
 
     __block NSURLSessionDataTask *dataTask = nil;
+    // 得到 dataTask
+    // 调用dataTaskWithRequest去拿到我们最终需要的NSURLSessionDataTask实例，
+    // 并且在完成的回调里，调用我们传过来的成功和失败的回调
     dataTask = [self dataTaskWithRequest:request
                           uploadProgress:uploadProgress
                         downloadProgress:downloadProgress

@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Person.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface KVVTest : XCTestCase
 
@@ -45,6 +46,18 @@
     NSString *loveValue = @"love";
     [person validateValue:&nameValue forKey:nameKey error:nil];
     [person validateValue:&loveValue forKey:loveKey error:nil];
+}
+
+- (void)testAFNGet {
+    
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        [manager GET:@"" parameters:nil progress:nil
+             success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                 
+             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                 
+             }];
+
 }
 
 @end
