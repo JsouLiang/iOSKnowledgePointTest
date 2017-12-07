@@ -24,6 +24,8 @@
 		47488AF51FCECC4E00E992FC /* DynamicChangeMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47488AF41FCECC4E00E992FC /* DynamicChangeMethodViewController.m */; };
 		47488AF81FCECC9600E992FC /* NSObject+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 47488AF71FCECC9600E992FC /* NSObject+Hook.m */; };
 		47488AFB1FCECD0900E992FC /* SubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 47488AFA1FCECD0900E992FC /* SubClass.m */; };
+		475B6E341FD4DEF8004F8696 /* MutableThreadNotifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475B6E331FD4DEF8004F8696 /* MutableThreadNotifyViewController.m */; };
+		475B6E371FD4E12E004F8696 /* MutableThreadNotifySolutionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475B6E361FD4E12E004F8696 /* MutableThreadNotifySolutionViewController.m */; };
 		4776160F1FAAAD4700396099 /* MutableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4776160E1FAAAD4700396099 /* MutableDelegate.m */; };
 		477616141FAAB50900396099 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 477616131FAAB50900396099 /* NSObject+KVO.m */; };
 		477616191FAAFA4400396099 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 477616181FAAFA4400396099 /* Algorithm.m */; };
@@ -91,6 +93,10 @@
 		47488AF71FCECC9600E992FC /* NSObject+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Hook.m"; sourceTree = "<group>"; };
 		47488AF91FCECD0900E992FC /* SubClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubClass.h; sourceTree = "<group>"; };
 		47488AFA1FCECD0900E992FC /* SubClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubClass.m; sourceTree = "<group>"; };
+		475B6E321FD4DEF8004F8696 /* MutableThreadNotifyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutableThreadNotifyViewController.h; sourceTree = "<group>"; };
+		475B6E331FD4DEF8004F8696 /* MutableThreadNotifyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutableThreadNotifyViewController.m; sourceTree = "<group>"; };
+		475B6E351FD4E12E004F8696 /* MutableThreadNotifySolutionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutableThreadNotifySolutionViewController.h; sourceTree = "<group>"; };
+		475B6E361FD4E12E004F8696 /* MutableThreadNotifySolutionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutableThreadNotifySolutionViewController.m; sourceTree = "<group>"; };
 		4776160D1FAAAD4700396099 /* MutableDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutableDelegate.h; sourceTree = "<group>"; };
 		4776160E1FAAAD4700396099 /* MutableDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutableDelegate.m; sourceTree = "<group>"; };
 		477616101FAAB4E000396099 /* 多重代码.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "多重代码.md"; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 		47F7956F1FA76A080031E93B /* Class3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Class3.m; sourceTree = "<group>"; };
 		47F795761FA809F30031E93B /* LRUCacheStrategy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRUCacheStrategy.h; sourceTree = "<group>"; };
 		47F795771FA809F30031E93B /* LRUCacheStrategy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRUCacheStrategy.m; sourceTree = "<group>"; };
+		47F9D07C1FD9053900376D50 /* NSNotification 多线程问题.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "NSNotification 多线程问题.md"; sourceTree = "<group>"; };
 		7205A4101C3EEF071468003F /* Pods-知识点验证合集.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集.release.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集/Pods-知识点验证合集.release.xcconfig"; sourceTree = "<group>"; };
 		8897BFC84EC04006FC468972 /* Pods-知识点验证合集Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集Tests/Pods-知识点验证合集Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A162103AE178A24B49B35EF1 /* Pods-知识点验证合集UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-知识点验证合集UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-知识点验证合集UITests/Pods-知识点验证合集UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +191,7 @@
 		472C9E9F1FA583E6005481C9 /* 知识点验证合集 */ = {
 			isa = PBXGroup;
 			children = (
+				475B6E311FD4DEB3004F8696 /* NSNotification */,
 				47488AF21FCECC2E00E992FC /* 动态替换实例方法 */,
 				4789114C1FBAE7D300819507 /* RunLoop */,
 				472054C71FAB0B3900AD2A76 /* NSOperation */,
@@ -240,6 +248,18 @@
 				47488AF71FCECC9600E992FC /* NSObject+Hook.m */,
 			);
 			path = "动态替换实例方法";
+			sourceTree = "<group>";
+		};
+		475B6E311FD4DEB3004F8696 /* NSNotification */ = {
+			isa = PBXGroup;
+			children = (
+				475B6E321FD4DEF8004F8696 /* MutableThreadNotifyViewController.h */,
+				475B6E331FD4DEF8004F8696 /* MutableThreadNotifyViewController.m */,
+				475B6E351FD4E12E004F8696 /* MutableThreadNotifySolutionViewController.h */,
+				475B6E361FD4E12E004F8696 /* MutableThreadNotifySolutionViewController.m */,
+				47F9D07C1FD9053900376D50 /* NSNotification 多线程问题.md */,
+			);
+			path = NSNotification;
 			sourceTree = "<group>";
 		};
 		4776160C1FAAAC2500396099 /* MutableDelegate */ = {
@@ -639,6 +659,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475B6E341FD4DEF8004F8696 /* MutableThreadNotifyViewController.m in Sources */,
 				47488AF51FCECC4E00E992FC /* DynamicChangeMethodViewController.m in Sources */,
 				472C9EA51FA583E6005481C9 /* ViewController.m in Sources */,
 				47F7956D1FA7619B0031E93B /* Class2.m in Sources */,
@@ -651,6 +672,7 @@
 				472C9ED41FA583F3005481C9 /* Person.m in Sources */,
 				47F7956A1FA7618F0031E93B /* Class1.m in Sources */,
 				47F795701FA76A080031E93B /* Class3.m in Sources */,
+				475B6E371FD4E12E004F8696 /* MutableThreadNotifySolutionViewController.m in Sources */,
 				472C9EA21FA583E6005481C9 /* AppDelegate.m in Sources */,
 				47F795781FA809F30031E93B /* LRUCacheStrategy.m in Sources */,
 				47488AF81FCECC9600E992FC /* NSObject+Hook.m in Sources */,

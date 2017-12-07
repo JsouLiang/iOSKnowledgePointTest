@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "NSObject+KVO.h"
 #import "Person.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface AppDelegate ()
 
@@ -34,6 +35,7 @@
             NSLog(@"observer");
         });
     }];
+    
     
     return YES;
 }
