@@ -12,7 +12,7 @@
 #import <AFNetworking/AFNetworking.h>
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) NSMutableArray *sourcesToPing;
 @end
 
 @implementation AppDelegate
@@ -38,6 +38,23 @@
     
     
     return YES;
+}
+
+- (void)registerSource:(RunloopContext *)sourceInfo {
+    [self.sourcesToPing addObject:sourceInfo];
+}
+
+- (void)removeSource:(RunloopContext *)sourceInfo {
+    id objToRemove = nil;
+    for (RunloopContext *context in self.sourcesToPing) {
+        if ([context isEqual:sourceInfo]) {
+            objToRemove = context;
+            break;
+        }
+    }
+    if (objToRemove) {
+        [self.sourcesToPing removeObject:objToRemove];
+    }
 }
 
 
