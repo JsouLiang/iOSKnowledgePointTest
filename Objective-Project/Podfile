@@ -7,12 +7,14 @@ target '知识点验证合集' do
   pod 'Aspects'
   pod 'AFNetworking'
   pod 'SDWebImage'
+  pod 'libextobjc'
 
   target '知识点验证合集Tests' do
     inherit! :search_paths
     pod 'Aspects'
     pod 'AFNetworking'
     pod 'SDWebImage'
+    pod 'libextobjc'
   end
 
   target '知识点验证合集UITests' do
@@ -20,6 +22,7 @@ target '知识点验证合集' do
     pod 'Aspects'
     pod 'AFNetworking'
     pod 'SDWebImage'
+    pod 'libextobjc'
   end
 
 end
