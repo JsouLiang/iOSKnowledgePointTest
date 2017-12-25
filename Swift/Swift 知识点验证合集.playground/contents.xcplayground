@@ -4,5 +4,7 @@
         <page name='Extension'/>
         <page name='Protocols'/>
         <page name='guard'/>
+        <page name='static 和 class方法区别'/>
+        <page name='Array.contains'/>
     </pages>
 </playground>
