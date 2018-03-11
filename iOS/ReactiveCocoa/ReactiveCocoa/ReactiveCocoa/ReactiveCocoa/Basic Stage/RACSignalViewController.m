@@ -29,7 +29,7 @@
         // 发送信号的变化
         // signal 通过订阅者发送消息时即 subScribeNext/error/complete，会走这个block，同时会把 signal 底层创建的订阅者传递进来，通过订阅者发送信息，调用 指定的 next、error、complete 消息的 block
         NSLog(@"RACSingal Block");
-        [subscriber sendNext: @2];
+       	[subscriber sendNext: @2];
         [subscriber sendCompleted]; // 发送完成，表示信号完成
         return [RACDisposable disposableWithBlock:^{
             NSLog(@"RACDisposable Block");
