@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Downloader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0GG-ch-T5H">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DownloadInfoCellTableViewCell" rowHeight="67" id="pRZ-cb-gTi" customClass="DownloadInfoCellTableViewCell" customModule="Downloader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pRZ-cb-gTi" id="m0x-dI-hoe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLV-LN-DfW">
+                                                    <rect key="frame" x="15" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Z4-dx-rmq">
+                                                    <rect key="frame" x="262" y="11" width="42" height="30"/>
+                                                    <state key="normal" title="Pause"/>
+                                                    <connections>
+                                                        <action selector="pauseDownload:" destination="pRZ-cb-gTi" eventType="touchUpInside" id="sEc-GX-2xj"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4D-7M-OOb">
+                                                    <rect key="frame" x="312" y="11" width="48" height="30"/>
+                                                    <state key="normal" title="Cancel"/>
+                                                    <connections>
+                                                        <action selector="cancelDownload:" destination="pRZ-cb-gTi" eventType="touchUpInside" id="790-LX-QrT"/>
+                                                    </connections>
+                                                </button>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UcN-oP-FoL">
+                                                    <rect key="frame" x="15" y="50" width="345" height="2"/>
+                                                </progressView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SED-aA-rP4">
+                                                    <rect key="frame" x="220" y="11" width="34" height="30"/>
+                                                    <state key="normal" title="Start"/>
+                                                    <connections>
+                                                        <action selector="startDownload:" destination="pRZ-cb-gTi" eventType="touchUpInside" id="4uR-fS-r5c"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SED-aA-rP4" firstAttribute="top" secondItem="m0x-dI-hoe" secondAttribute="topMargin" id="3gR-Jo-eo6"/>
+                                                <constraint firstItem="5Z4-dx-rmq" firstAttribute="top" secondItem="m0x-dI-hoe" secondAttribute="topMargin" id="74p-mV-2eN"/>
+                                                <constraint firstItem="dLV-LN-DfW" firstAttribute="leading" secondItem="m0x-dI-hoe" secondAttribute="leadingMargin" id="MfG-8V-MDM"/>
+                                                <constraint firstItem="z4D-7M-OOb" firstAttribute="trailing" secondItem="m0x-dI-hoe" secondAttribute="trailingMargin" id="WHy-x7-Aaw"/>
+                                                <constraint firstItem="5Z4-dx-rmq" firstAttribute="leading" secondItem="SED-aA-rP4" secondAttribute="trailing" constant="8" id="bEy-Cy-ZG2"/>
+                                                <constraint firstItem="z4D-7M-OOb" firstAttribute="leading" secondItem="5Z4-dx-rmq" secondAttribute="trailing" constant="8" id="f7L-hJ-UgC"/>
+                                                <constraint firstItem="UcN-oP-FoL" firstAttribute="trailing" secondItem="m0x-dI-hoe" secondAttribute="trailingMargin" id="jVp-Df-cT1"/>
+                                                <constraint firstItem="z4D-7M-OOb" firstAttribute="top" secondItem="m0x-dI-hoe" secondAttribute="topMargin" id="mK5-Px-v51"/>
+                                                <constraint firstItem="dLV-LN-DfW" firstAttribute="top" secondItem="m0x-dI-hoe" secondAttribute="topMargin" id="pcd-c9-2nG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="UcN-oP-FoL" secondAttribute="bottom" constant="4" id="qzd-k3-v5j"/>
+                                                <constraint firstItem="UcN-oP-FoL" firstAttribute="leading" secondItem="m0x-dI-hoe" secondAttribute="leadingMargin" id="sHd-fB-kwE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="dLV-LN-DfW" id="bYR-Qu-ma8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xW9-Fs-tbA"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ePb-LH-xfL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0GG-ch-T5H" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0Xi-bd-S0o"/>
+                            <constraint firstItem="0GG-ch-T5H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Scl-tQ-JHm"/>
+                            <constraint firstItem="0GG-ch-T5H" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pFD-6V-c2d"/>
+                            <constraint firstItem="0GG-ch-T5H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xWS-vY-s7z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

@@ -18,15 +18,38 @@ enum DownloadedSourceStatus {
 	case canceled  			// 取消下载
 }
 
+
+
 protocol Downloadable: NSObjectProtocol {
 	//	资源URL
-	var sourceURL: URL {set get}
+	var sourceURL: URL {get}
 	/// 下载的进度
 	var progress: Float {set get}
 	
-	///
 	var resumeData: Data? {set get}
 	
-	var downloadStatus: DownloadedSourceStatus {set get}
+	var downloadStatus: DownloadedSourceStatus { set get}
+	
+	var saveFilePath: URL { get }
+}
+
+extension Downloadable {
+	/// 完整文件大小
+	var totalExceptedFileSize: ((String) -> ())? {
+		return nil
+	}
+	/// 下载进度
+	var trackProgressOption: ((Float) -> ())? {
+		return nil
+	}
+	
+	var resumeData: Data? {
+		return nil
+	}
+	
+	var saveFilePath: URL {
+		let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+		return documentsPath.appendingPathComponent(sourceURL.lastPathComponent)
+	}
 }
 

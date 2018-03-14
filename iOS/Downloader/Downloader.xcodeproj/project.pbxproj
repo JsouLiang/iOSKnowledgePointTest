@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC1168BC2058164D004FF567 /* FilesDownloaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1168BB2058164D004FF567 /* FilesDownloaderManager.swift */; };
+		EC1168BE20581E3A004FF567 /* DownloadInfoCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1168BD20581E3A004FF567 /* DownloadInfoCellTableViewCell.swift */; };
 		ECE678A5204FBF8100993257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE678A4204FBF8100993257 /* AppDelegate.swift */; };
 		ECE678A7204FBF8100993257 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE678A6204FBF8100993257 /* ViewController.swift */; };
 		ECE678AA204FBF8100993257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE678A8204FBF8100993257 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC1168BB2058164D004FF567 /* FilesDownloaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesDownloaderManager.swift; sourceTree = "<group>"; };
+		EC1168BD20581E3A004FF567 /* DownloadInfoCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadInfoCellTableViewCell.swift; sourceTree = "<group>"; };
 		ECE678A1204FBF8100993257 /* Downloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Downloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE678A4204FBF8100993257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECE678A6204FBF8100993257 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 				ECE678BB20500DA600993257 /* DownloadedModel.swift */,
 				ECE678A4204FBF8100993257 /* AppDelegate.swift */,
 				ECE678A6204FBF8100993257 /* ViewController.swift */,
+				EC1168BD20581E3A004FF567 /* DownloadInfoCellTableViewCell.swift */,
 				ECE678A8204FBF8100993257 /* Main.storyboard */,
 				ECE678AB204FBF8100993257 /* Assets.xcassets */,
 				ECE678AD204FBF8100993257 /* LaunchScreen.storyboard */,
@@ -84,8 +89,9 @@
 				ECE678DB2054F1CD00993257 /* State.swift */,
 				ECE678B920500CED00993257 /* Downloadable.swift */,
 				ECE678B7204FC0B900993257 /* FilesDownloadOperation.swift */,
-				ECE678E120554C5D00993257 /* FilesDownloaderOperation.swift */,
 				ECE678DF2055428C00993257 /* DownloaderManager.swift */,
+				ECE678E120554C5D00993257 /* FilesDownloaderOperation.swift */,
+				EC1168BB2058164D004FF567 /* FilesDownloaderManager.swift */,
 			);
 			path = Downloader;
 			sourceTree = "<group>";
@@ -169,7 +175,9 @@
 				ECE678B8204FC0B900993257 /* FilesDownloadOperation.swift in Sources */,
 				ECE678BC20500DA600993257 /* DownloadedModel.swift in Sources */,
 				ECE678A5204FBF8100993257 /* AppDelegate.swift in Sources */,
+				EC1168BC2058164D004FF567 /* FilesDownloaderManager.swift in Sources */,
 				ECE678DC2054F1CE00993257 /* State.swift in Sources */,
+				EC1168BE20581E3A004FF567 /* DownloadInfoCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

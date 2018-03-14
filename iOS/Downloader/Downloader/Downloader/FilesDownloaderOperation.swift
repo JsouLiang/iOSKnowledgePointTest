@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol  FilesDownloaderOperationDelegate{
+	
+}
+
 class FilesDownloaderOperation: Operation {
+	var operationDelegate: FilesDownloaderOperationDelegate?
+	
 	private var session: URLSession!
 	private var task: URLSessionDownloadTask?
 	private let downloadableModel: Downloadable
@@ -66,13 +72,12 @@ class FilesDownloaderOperation: Operation {
 		downloadableModel.downloadStatus = .canceled
 		if let task = task {
 			task.cancel()
-			if _executing { _executing = false }
-			if _finished != true { _finished = true }
+			operationFinish()
 		}
 		reset()
 	}
 	
-	func suspancd() {
+	func suspend() {
 		if downloadableModel.downloadStatus == .running {
 			task?.cancel { [weak self] (resumeData) in
 				guard let `self` = self else { return }
@@ -80,19 +85,25 @@ class FilesDownloaderOperation: Operation {
 				self.downloadableModel.resumeData = resumeData
 				self.downloadableModel.downloadStatus = .suspended
 			}
+		} else if downloadableModel.downloadStatus == .waiting {	// waiting, Don't have downloded data
+			task?.suspend()
+			self.downloadableModel.downloadStatus = .suspended
 		}
-		
 	}
 	
 	func resume() {
-		guard let resumeData = downloadableModel.resumeData else {
-			return
+		// resume from have downloaded data, suspending status
+		if let resumeData = downloadableModel.resumeData {
+			task = session.downloadTask(withResumeData: resumeData)
 		}
-		task = session.downloadTask(withResumeData: resumeData)
+		
+		// resume from don't have downloaded data, suspending status
 		task!.resume()
 		downloadableModel.downloadStatus = .running
 		_executing = true
 	}
+	
+	
 }
 
 extension FilesDownloaderOperation {
@@ -117,22 +128,57 @@ extension FilesDownloaderOperation {
 		session.invalidateAndCancel()
 		session = nil
 	}
+	
+	private func operationFinish() {
+		if _executing { _executing = false }
+		if _finished != true { _finished = true }
+	}
 }
 
 extension FilesDownloaderOperation:URLSessionDownloadDelegate {
 	func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-		
+		let destinationPath = downloadableModel.saveFilePath
+		// move finised file
+		do {
+			try FileManager.default.moveItem(at: location, to: destinationPath)
+			downloadableModel.downloadStatus = .completed
+		} catch _{
+			downloadableModel.downloadStatus = .failed
+		}
 	}
 	
 	func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-		
+		if error == nil {
+			downloadableModel.downloadStatus = .completed
+			operationFinish()
+		}
+		else {
+			let urlError = error as! URLError
+			if urlError.userInfo["NSURLSessionDownloadTaskResumeData"] != nil {
+				downloadableModel.downloadStatus = .suspended
+			}
+		}
 	}
 	
 	func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-		
+		let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
+		let fileSize = ByteCountFormatter.string(fromByteCount: totalBytesExpectedToWrite, countStyle: .file)
+		downloadableModel.totalExceptedFileSize.map { (option) -> Void in
+			option(fileSize)
+		}
+		downloadableModel.trackProgressOption.map { (progressOption) -> Void in
+			progressOption(progress)
+		}
 	}
 	
 	func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didResumeAtOffset fileOffset: Int64, expectedTotalBytes: Int64) {
-		
+		let progress = Float(fileOffset) / Float(expectedTotalBytes)
+		let fileSize = ByteCountFormatter.string(fromByteCount: expectedTotalBytes, countStyle: .file)
+		downloadableModel.totalExceptedFileSize.map { (option) -> Void in
+			option(fileSize)
+		}
+		downloadableModel.trackProgressOption.map { (progressOption) -> Void in
+			progressOption(progress)
+		}
 	}
 }

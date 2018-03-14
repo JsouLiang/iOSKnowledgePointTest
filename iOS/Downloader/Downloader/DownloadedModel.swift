@@ -10,10 +10,11 @@ import UIKit
 
 class DownloadedModel: NSObject, Downloadable {
 	var resumeData: Data?
-	
 	var downloadStatus: DownloadedSourceStatus = .none
-	
 	var progress: Float = 0
+	var sourceURL: URL
 	
-	var sourceURL: URL = URL(string: "")!
+	init(sourceURL: URL) {
+		self.sourceURL = sourceURL
+	}
 }

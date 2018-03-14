@@ -23,7 +23,6 @@ class DownloaderManager: NSObject {
 extension DownloaderManager {
 	func start(_ downloader: Downloadable) {
 //		let operation = FilesDownloadOperation(downloadedModel: downloader, session: downloadSession)
-		
 	}
 }
 
