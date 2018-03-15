@@ -44,12 +44,12 @@ class FilesDownloaderOperation: Operation {
 	}
 	
 	override func start() {
+		objc_sync_enter(self)
 		if isCancelled {
 			_finished = true
 			return
 		}
 		
-		objc_sync_enter(self)
 		// create task
 		if task == nil {
 			if downloadableModel.resumeData != nil {	// had resumeData
@@ -57,24 +57,28 @@ class FilesDownloaderOperation: Operation {
 			} else {	// don't have resume data
 				task = session.downloadTask(with: downloadableModel.sourceURL)
 			}
+			_executing = true
 		}
 		objc_sync_exit(self)
 		// executing
 		task!.resume()
-		_executing = true
 		downloadableModel.downloadStatus = .running
 	}
 	
 	override func cancel() {
+		//
+		objc_sync_enter(self)
 		if _finished { return }
 		// unfinished，can be canceled
 		super.cancel()
 		downloadableModel.downloadStatus = .canceled
 		if let task = task {
 			task.cancel()
-			operationFinish()
+			if _executing { _executing = false }
+			if _finished != true { _finished = true }
 		}
 		reset()
+		objc_sync_exit(self)
 	}
 	
 	func suspend() {
@@ -107,6 +111,14 @@ class FilesDownloaderOperation: Operation {
 }
 
 extension FilesDownloaderOperation {
+	override var isReady: Bool {
+		return downloadableModel.downloadStatus == .waiting && super.isReady
+	}
+	
+	override var isCancelled: Bool {
+		return downloadableModel.downloadStatus == .canceled
+	}
+	
 	override var isFinished: Bool {
 		return _finished == true
 	}
@@ -115,23 +127,30 @@ extension FilesDownloaderOperation {
 		return _executing == true
 	}
 	
-	override var isConcurrent: Bool {
+	override var isAsynchronous: Bool {
 		return true
 	}
 }
 
 extension FilesDownloaderOperation {
 	private func reset() {
+		// 加锁原因: 可能会有两条线程会调用该方法，cancel() 所在线程，URLSessionDidFinished回调调用operationFinished 的线程
+		objc_sync_enter(self)
 		if task != nil {
 			task = nil
 		}
-		session.invalidateAndCancel()
-		session = nil
+		if session != nil {
+			session.invalidateAndCancel()
+			session = nil
+		}
+		objc_sync_exit(self)
+		
 	}
 	
 	private func operationFinish() {
-		if _executing { _executing = false }
-		if _finished != true { _finished = true }
+		if _finished == false { _finished = true }
+		if _executing == true { _executing = false}
+		reset()
 	}
 }
 
@@ -153,10 +172,11 @@ extension FilesDownloaderOperation:URLSessionDownloadDelegate {
 			operationFinish()
 		}
 		else {
-			let urlError = error as! URLError
-			if urlError.userInfo["NSURLSessionDownloadTaskResumeData"] != nil {
-				downloadableModel.downloadStatus = .suspended
-			}
+//			let urlError = error as! URLError
+//			if urlError.userInfo["NSURLSessionDownloadTaskResumeData"] != nil {
+//				downloadableModel.downloadStatus = .suspended
+//			}
+			operationFinish()
 		}
 	}
 	
